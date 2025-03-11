@@ -163,3 +163,9 @@ input[type="checkbox"] {
 .checkboxWrapper label {
   cursor: pointer;
 }
+
+
+.alert{
+  color: #c82333; /*   colocar em uma variavel  */
+  font-size: 0.8rem;
+}

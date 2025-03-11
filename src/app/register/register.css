@@ -1,0 +1,9 @@
+.ContainerRegister {
+    background-image: url(../../../public/ImageBackgroundRegister.jpg);
+    background-size: cover;
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     background-color: black;
+     overflow: none;
+   }

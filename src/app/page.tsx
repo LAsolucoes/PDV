@@ -56,7 +56,7 @@ export default function Login() {
             </div>
 
             <div>
-              <Link href={"/"}
+              <Link href={"/remember"}
                 className={styles.ResetPassword}>
                 Esqueci minha senha</Link>
             </div>
@@ -66,12 +66,12 @@ export default function Login() {
                 value={"Logar"}
                 name={"login"}
                 type={"submit"}
-                className={"btnPrimary"}
+                className={"btnDark"}
               />
 
               <span className={styles.Register}>
                 Não possui uma conta?
-                <Link href={"/"}> Registrar-se</Link>
+                <Link href={"/register"}> Registrar-se</Link>
               </span>
             </div>
 
