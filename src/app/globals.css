@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+ 
+  --white: #fff;
+  --ice: #f5f8ff;
+  --gray: #495057;
+  --gray-primary: #ced4da;
+  --gray-secondary: #e7e7e7;
+}
+
+
+
+
+label,
+span {
+  color: var(--gray);
+  font-size: 0.7rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+/* BUTTON */
+button {
+  background-color: transparent;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* PRIMARY */
+.btnPrimary {
+  color: #fff;
+  background-color: #007bff;
+}
+.btnPrimary:hover {
+  background-color: #0069d9;
+}
+.btnPrimary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/* SECONDARY */
+.btnSecondary {
+  color: #fff;
+  background-color: #6c757d;
+}
+.btnSecondary:hover {
+  background-color: #5a6268;
+}
+.btnSecondary:focus {
+  box-shadow: 0 0 0 0.2rem 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+/* SUCCESS */
+.btnSuccess {
+  color: #fff;
+  background-color: #28a745;
+}
+.btnSuccess:hover {
+  background-color: #218838;
+}
+.btnSuccess:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+/* DANGER */
+.btnDanger {
+  color: #fff;
+  background-color: #dc3545;
+}
+.btnDanger:hover {
+  background-color: #c82333;
+}
+.btnDanger:focus {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+/* WARNING */
+.btnWarning {
+  color: #212529;
+  background-color: #ffc107;
+}
+.btnWarning:hover {
+  background-color: #e0a800;
+}
+.btnWarning:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+/* DARK */
+.btnDark {
+  color: #fff;
+  background-color: #343a40;
+}
+.btnDark:hover {
+  background-color: #23272b;
+}
+.btnDark:focus {
+  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--gray-primary);
+  outline: none;
+  transition: 0.4s ease;
+  background-color: var(--ice);
+}
+input:hover {
+  background-color: var(--white);
+}
+
+input:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  background-color: var(--white);
+}
+
+input ::placeholder {
+  color: var(--gray-primary);
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.input-sm {
+  width: 150px;
+}
+
+.input-md {
+  width: 250px;
+}
+
+.input-lg {
+  width: 350px;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  gap: 5px;
+}
+.checkboxWrapper label {
+  cursor: pointer;
+}

@@ -1,0 +1,49 @@
+.Container {
+ background-image: url(../../public/ImageBackgroundLogin.jpg);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: black;
+  overflow: none;
+}
+
+.ContainerForm {
+  background-color: var(--ice);
+  padding: 16px;
+  border-radius: 15px;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+.LogoTipo{
+    display: flex;
+    margin: 10px auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.Form{
+    padding: 16px;
+
+}
+.Form a:hover {
+    text-decoration: underline;
+  }
+
+.ResetPassword {
+  font-size: 0.8rem;
+}
+.FooterForm {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.FooterForm .Register {
+  font-size: 0.7rem;
+  margin-top: 20px;
+}
+
