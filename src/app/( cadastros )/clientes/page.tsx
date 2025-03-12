@@ -1,29 +1,29 @@
-import MainContent from "../components/MainContent";
-import TitlePages from "../components/TitlePages";
+import MainContent from "../../components/MainContent";
+import TitlePages from "../../components/TitlePages";
 import Link from "next/link";
 import { IoMdAdd } from "react-icons/io";
 import { FaEdit } from "react-icons/fa"; /* EDITAR */
 import { MdDeleteForever } from "react-icons/md"; /* DELETE */
+import { RiFileCopy2Fill } from "react-icons/ri"; /* MOVIMENTACOES */
 import { FaCheck } from "react-icons/fa"; /* CHECK */
 import { TiDelete } from "react-icons/ti"; /* NO ATIVO */
 import { IoSearchSharp } from "react-icons/io5"; /* SEARCH */
-import Image from "next/image";
-import ImageProduct1 from "../../../public/COCA COLA 350ML.png";
-import ImageProduct2 from "../../../public/FANTA LARANJA 350ML.png";
-import Button from "../components/Button";
 
-export default function Category() {
+
+import Button from "../../components/( Buttons )/Button";
+
+export default function Clientes() {
   return (
     <>
       <MainContent>
         <div>
-          <TitlePages title={"PRODUTOS"} />
+          <TitlePages title={"CLIENTES"} />
         </div>
 
         <div className="ContainerBtnPagesNavegation">
-          <Link href={"#"} className="btnNew" title="Cadastrar novo Produto">
+          <Link href={"#"} className="btnNew" title="Cadastrar novo Cliente">
             <IoMdAdd />
-            Novo Produto
+            Novo Cliente
           </Link>
         </div>
 
@@ -33,36 +33,14 @@ export default function Category() {
             <input
               className="input-md"
               type="text"
-              placeholder="Pesquise o nome da categoria..."
+              placeholder="Pesquise o nome do cliente..."
             />
           </div>
-          <div className="inputField">
-            <label>Cod. Barras</label>
-            <input
-              className="input-md"
-              type="text"
-              placeholder="Pesquise pelo cod.barras..."
-            />
-          </div>
-
-          <div className="inputField">
-            <label>Categoria</label>
-            <select>
-              <option value=""> - - </option>
-              <option value=""> Bebidas</option>
-            </select>
-          </div>
-          <div className="inputField">
-            <label>Marca</label>
-            <select>
-              <option value="">- -</option>
-              <option value=""> Adidas </option>
-            </select>
-          </div>
+        
           <div className="inputField">
             <label>Ativo</label>
             <select>
-              <option value=""> - -</option>
+              <option value="">- -</option>
               <option value="">Sim</option>
               <option value="">Não</option>
             </select>
@@ -71,10 +49,10 @@ export default function Category() {
           <Button
             icon={<IoSearchSharp />}
             value={"Pesquisar"}
-            name={"filterCategory"}
+            name={"filter"}
             type={"button"}
             className={"btnPrimary"}
-            title={"Pesquisar Categoria"}
+            title={"Pesquisar Cliente"}
           />
         </div>
         <hr />
@@ -89,11 +67,10 @@ export default function Category() {
           <thead>
             <tr>
               <th>Ações</th>
-              <th>Imagem</th>
               <th>Nome</th>
-              <th>Estoque</th>
-              <th>Valor de Venda</th>
-              <th>Valor de Custo</th>
+              <th>Email</th>
+              <th>Endereço</th>
+              <th>Contato</th>
               <th>Data de Cadastro</th>
               <th>Usuário</th>
               <th>Ativo</th>
@@ -117,18 +94,23 @@ export default function Category() {
                   className={"btnDanger"}
                   title={"Deletar Cadastro"}
                 />
+                
+                <Button
+                  icon={<RiFileCopy2Fill />}
+                  value={""}
+                  name={"BtnAcoesEdit"}
+                  className={"btnSecondary"}
+                  title={"Movimentações do Produto"}
+                />
               </td>
-              <td>
-                <Image src={ImageProduct1} alt={""} width={40} height={40} />
-              </td>
-              <td>Coca cola 350ml</td>
-              <td>12</td>
-              <td>5,00</td>
-              <td>2,79</td>
+              
+              <td>Nome do usuário</td>
+              <td>email@email.com.br</td>
+              <td>Rua dev lasolucoes</td>
+              <td>11 94045-1410</td>
               <td>12/03/2025 08:54</td>
               <td>Nome do Usuário</td>
               <td>
-                {" "}
                 <FaCheck />
               </td>
             </tr>
@@ -150,14 +132,20 @@ export default function Category() {
                   className={"btnDanger"}
                   title={"Deletar Cadastro"}
                 />
+               
+                <Button
+                  icon={<RiFileCopy2Fill />}
+                  value={""}
+                  name={"BtnAcoesEdit"}
+                  className={"btnSecondary"}
+                  title={"Movimentações do Produto"}
+                />
               </td>
-              <td>
-                <Image src={ImageProduct2} alt={""} width={40} height={40} />
-              </td>
-              <td>Fanta Laranja 350ml</td>
-              <td>7</td>
-              <td>4,00</td>
-              <td>2,39</td>
+              
+              <td>Nome do usuário</td>
+              <td>email@emial.com.br</td>
+              <td>Av Aricanduva </td>
+              <td>11 94001-6064</td>
               <td>12/03/2025 08:54</td>
               <td>Nome do Usuário</td>
               <td>

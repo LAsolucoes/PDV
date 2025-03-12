@@ -1,5 +1,5 @@
-import MainContent from "../components/MainContent";
-import TitlePages from "../components/TitlePages";
+import MainContent from "../../../components/MainContent";
+import TitlePages from "../../../components/TitlePages";
 import Link from "next/link";
 import { IoMdAdd } from "react-icons/io";
 import { FaEdit } from "react-icons/fa"; /* EDITAR */
@@ -8,20 +8,20 @@ import { FaCheck } from "react-icons/fa"; /* CHECK */
 import { TiDelete } from "react-icons/ti"; /* NO ATIVO */
 import { IoSearchSharp } from "react-icons/io5"; /* SEARCH */
 
-import Button from "../components/Button";
+import Button from "../../../components/( Buttons )/Button";
 
-export default function Marcas() {
+export default function Category() {
   return (
     <>
       <MainContent>
         <div>
-          <TitlePages title={"MARCAS"} />
+          <TitlePages title={"CATEGORIA"} />
         </div>
 
         <div className="ContainerBtnPagesNavegation">
-          <Link href={"#"} className="btnNew" title="Cadastrar nova Marca">
+          <Link href={"/nova-categoria"} className="btnNew" title="Cadastrar nova Categoria">
             <IoMdAdd />
-            Nova Marca
+            Nova Categoria
           </Link>
         </div>
 
@@ -31,7 +31,7 @@ export default function Marcas() {
             <input
               className="input-md"
               type="text"
-              placeholder="Pesquise o nome da marca..."
+              placeholder="Pesquise o nome da categoria..."
             />
           </div>
 
@@ -50,7 +50,7 @@ export default function Marcas() {
             name={"filterCategory"}
             type={"button"}
             className={"btnPrimary"}
-            title={"Pesquisar Marcas"}
+            title={"Pesquisar Categoria"}
           />
         </div>
         <hr />
@@ -91,7 +91,7 @@ export default function Marcas() {
                 />
               </td>
 
-              <td>Nike</td>
+              <td>Bebidas</td>
               <td>12/03/2025 08:54</td>
               <td>Nome do Usuário</td>
               <td>
@@ -117,7 +117,7 @@ export default function Marcas() {
                 />
               </td>
 
-              <td>Adidas</td>
+              <td>Bebidas</td>
               <td>12/03/2025 08:54</td>
               <td>Nome do Usuário</td>
               <td>

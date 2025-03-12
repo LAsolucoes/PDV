@@ -104,14 +104,14 @@ export default function Sidebar(){
                                 <li><Link href={"/categorias"}><BiSolidCategory />Categoria</Link></li>
                                 <li><Link href={"/marcas"}><FaCopyright />Marcas</Link></li>
                                 <li><Link href={"/produtos"}><FaTshirt />Produtos</Link></li>
-                                <li><Link href={"/"}><FaUser />Usuários</Link></li>
-                                <li><Link href={"/"}><FaAddressBook />Clientes</Link></li>
-                                <li><Link href={"/"}><FaTruck />Fornecedores</Link></li>
-                                <li><Link href={"/"}><FaTools />Serviços</Link></li>
-                                <li><Link href={"/"}><MdPriceChange />Lista de Preços</Link></li>
-                                <li><Link href={"/"}><FaClipboardList />Taxa de Cartões</Link></li>
-                                <li><Link href={"/"}><FaCalculator />Taxa de Vendas</Link></li>
-                                <li><Link href={"/"}><FaMoneyCheckDollar />Taxa de Pagamentos</Link></li>
+                                <li><Link href={"/usuarios"}><FaUser />Usuários</Link></li>
+                                <li><Link href={"/clientes"}><FaAddressBook />Clientes</Link></li>
+                                <li><Link href={"/fornecedores"}><FaTruck />Fornecedores</Link></li>
+                                <li><Link href={"/servicos"}><FaTools />Serviços</Link></li>
+                                <li><Link href={"/lista-de-precos"}><MdPriceChange />Lista de Preços</Link></li>
+                                <li><Link href={"/taxa-de-cartoes"}><FaClipboardList />Taxa de Cartões</Link></li>
+                                <li><Link href={"/taxa-de-vendas"}><FaCalculator />Taxa de Vendas</Link></li>
+                                <li><Link href={"/taxa-de-pagamentos"}><FaMoneyCheckDollar />Taxa de Pagamentos</Link></li>
                             </ul>
                         </div>
                         </li>

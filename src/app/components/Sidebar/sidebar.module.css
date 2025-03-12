@@ -28,12 +28,12 @@
     height: 100vh;
     overflow: auto;
     margin-top: 30px;
-    line-height: 2;
+    
 }
 
 .Nav a{
     font-size: 0.9rem ;
-    line-height: 1.5;
+    line-height: 2;
     transition: 0.5s ease;
     color: var(--white);
 }

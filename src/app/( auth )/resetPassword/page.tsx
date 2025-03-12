@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "@/app/page.module.css";
 import "./remember.css";
-import Button from "@/app/components/Button";
+import Button from "@/app/components/( Buttons )/Button";
 import ImageEmail from "../../../public/ImageEmail.png";
 import Image from "next/image";
 

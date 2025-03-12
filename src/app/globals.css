@@ -83,7 +83,7 @@ a {
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 8px 10px;
+  padding: 5px 10px;
   border-radius: 5px;
   border: none;
   outline: none;
@@ -296,6 +296,7 @@ thead {
 thead th {
   padding: 10px;
   font-weight: 400;
+  text-align: center;
 }
 
 tbody {
@@ -305,8 +306,11 @@ tbody {
 
 tbody td {
   padding: 5px;
-  
-  /* border-bottom: 1px solid var(--gray-primary); */
+  text-align: center;
+
+}
+tbody tr{
+  border-bottom: 1px solid var(--gray-primary);
 }
 
 tbody tr:hover {
@@ -316,7 +320,7 @@ tbody tr:hover {
 tbody .BtnAcoesTable {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 2px;
   margin: 5px;
 }
 
