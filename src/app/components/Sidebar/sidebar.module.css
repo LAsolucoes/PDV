@@ -1,0 +1,56 @@
+.Sidebar{
+    background-color: var(--dark);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 15%;
+    max-height: 100%;
+   
+}
+.Sidebar .ImageLogoSidebar{
+    display: flex;
+    border-radius: 50px;
+    margin: 5px auto;
+}
+
+.Sidebar li{
+    list-style: none;
+}
+.Sidebar ul{
+    list-style: none;
+    margin-left: 10px;
+}
+
+.Nav{
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.Nav a{
+    font-size: 0.9rem ;
+    line-height: 1.5;
+    transition: 0.5s ease;
+    color: var(--white);
+}
+.Nav a:hover{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.SubMenu ul{
+    border-left: 2px solid var(--gray);
+    margin: 5px 0px 0px 16px;
+}
+
+/* ABERTURA E FECHAMENTO DO SUBMENU SIDEBAR */
+.open{
+    display: block;
+}
+.close{
+    display: none;
+}

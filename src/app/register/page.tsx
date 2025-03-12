@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "@/app/page.module.css";
-import "./register.css"
+import "./register.css";
 import Button from "@/app/components/Button";
 import LogoTipo from "../../../public/LogoTipo.jpg";
 import Image from "next/image";
@@ -22,21 +22,31 @@ export default function Register() {
 
           <form action="" className={styles.Form}>
             <div className="inputField">
-              <label htmlFor="">Email</label>
-              <input type="text" placeholder="Email" required name="email" />
+              <label htmlFor="email">Email</label>
+              <input
+                type="text"
+                id="email"
+                placeholder="Email"
+                required
+                name="email"
+              />
             </div>
+
             <div className="inputField">
-              <label htmlFor="">Senha</label>
+              <label htmlFor="password">Senha</label>
               <input
                 type="password"
+                id="password"
                 placeholder="*****"
                 required
                 name="password"
               />
             </div>
+
             <div className="inputField">
-              <label htmlFor="">Confirmar Senha</label>
+              <label htmlFor="confirmPassword">Confirmar Senha</label>
               <input
+                id="confirmPassword"
                 type="password"
                 placeholder="*****"
                 required

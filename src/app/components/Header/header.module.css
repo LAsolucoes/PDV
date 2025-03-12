@@ -1,0 +1,43 @@
+.Header{
+    width: 100vw;
+    background-color: var(--dark);
+    padding: 5px;
+   
+}
+.ContainerHeader{
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20%;
+}
+.headerBtns{
+    display: flex;
+    gap: 30px;
+    padding: 0px 5px;
+}
+.headerNotificationsUserAvatarLogout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 10px;
+    cursor: pointer;
+}
+.iconsAcoes{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+    margin-right: 20px;
+    
+}
+.ImageAvatar{
+    border-radius: 50%;
+
+}
+
+.nameUser{
+    color: white;
+}

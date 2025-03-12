@@ -1,13 +1,11 @@
 .Container {
- background-image: url(../../public/ImageBackgroundLogin.jpg);
- background-size: cover;
+  background-image: url(../../public/ImageBackgroundLogin.jpg);
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   display: flex;
-  background-color: black;
   overflow: none;
 }
-
 .ContainerForm {
   background-color: var(--ice);
   padding: 16px;
@@ -17,37 +15,32 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
 }
-
-
-.ContainerLogo{
+.ContainerLogo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.ContainerLogo label{
+.ContainerLogo label {
   display: block;
-  text-align: center; 
+  text-align: center;
   word-wrap: break-word;
   padding: 20px;
 }
-
-.LogoTipo{
-    display: flex;
-    margin: 10px auto;
-    border-radius: 50%;
-    object-fit: cover;
+.LogoTipo {
+  display: flex;
+  margin: 10px auto;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.Form{
-    padding: 16px;
-
+.Form {
+  padding: 16px;
 }
 .Form a:hover {
-    text-decoration: underline;
-  }
-
+  text-decoration: underline;
+}
 .ResetPassword {
   font-size: 0.8rem;
 }
@@ -62,4 +55,3 @@
   font-size: 0.7rem;
   margin-top: 20px;
 }
-

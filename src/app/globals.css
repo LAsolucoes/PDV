@@ -8,9 +8,30 @@
  
   --white: #fff;
   --ice: #f5f8ff;
+
   --gray: #495057;
   --gray-primary: #ced4da;
   --gray-secondary: #e7e7e7;
+
+   --blue : #007bff;
+   --blue-primary: #0069d9;
+   --blue-secondary: #007bff80;
+
+
+   --ligth : #f8f9fa;
+   --ligth-primary : #e2e6ea ;
+   --ligth-secondary : #f8f9fa80;
+
+
+
+
+
+
+  --dark : #23272b
+}
+
+body{
+  background-color: var(--ligth-primary);
 }
 
 
@@ -29,14 +50,20 @@ a {
 }
 
 /* BUTTON */
-button {
+button, a{
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding: 8px 10px;
   border-radius: 5px;
   border: none;
   outline: none;
   cursor: pointer;
+  width: auto;
 }
+
+
 /* PRIMARY */
 .btnPrimary {
   color: #fff;
@@ -46,7 +73,7 @@ button {
   background-color: #0069d9;
 }
 .btnPrimary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem #007bff80;
 }
 
 /* SECONDARY */
@@ -58,13 +85,14 @@ button {
   background-color: #5a6268;
 }
 .btnSecondary:focus {
-  box-shadow: 0 0 0 0.2rem 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+  box-shadow: 0 0 0 0.2rem  rgba(108, 117, 125, 0.5);
 }
 
 /* SUCCESS */
 .btnSuccess {
   color: #fff;
   background-color: #28a745;
+  width: auto;
 }
 .btnSuccess:hover {
   background-color: #218838;
@@ -108,6 +136,17 @@ button {
 }
 .btnDark:focus {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+/* LIGHT */
+.btnLight {
+  color: var(--gray);
+  background-color: #f8f9fa;
+}
+.btnLight:hover {
+  background-color: #e2e6ea;
+}
+.btnLight:focus {
+  box-shadow: 0 0 0 0.2rem #f8f9fa80;
 }
 
 input {
@@ -154,6 +193,16 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+
+.icons{
+  font-size: 1.2rem;
+  color: var(--white);
+}
+.icons:hover{
+  font-size: 1.2rem;
+  color: var(--blue-primary);
+}
+
 .checkboxWrapper {
   display: flex;
   align-items: center;
@@ -168,4 +217,8 @@ input[type="checkbox"] {
 .alert{
   color: #c82333; /*   colocar em uma variavel  */
   font-size: 0.8rem;
+}
+
+.ContainerBtnPagesNavegation{
+  display: flex;
 }

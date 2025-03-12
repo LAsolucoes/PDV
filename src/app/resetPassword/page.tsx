@@ -24,8 +24,14 @@ export default function Remember(){
 
           <form action="" className={styles.Form}>
             <div className="inputField">
-              <label htmlFor="">Email</label>
-              <input type="text" placeholder="Email" required name="email" />
+              <label htmlFor="email">Email</label>
+              <input 
+              type="text"
+               id="email"
+                placeholder="Email" 
+                name="email" 
+                required
+                />
             </div>
             
 
@@ -39,7 +45,7 @@ export default function Remember(){
 
               <span className={styles.Register}>
                 Lembrou email e senha?
-                <Link href={"/"}> Login</Link>
+                <Link href={"/"}>Login</Link>
               </span>
             </div>
           </form>

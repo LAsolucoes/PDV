@@ -1,0 +1,14 @@
+.ConstainerTitle{
+    display: flex;
+    flex-direction: column;
+}
+.ConstainerTitle hr{
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+.TitlePages{
+    margin: 16px 10px;
+    color: var(--gray);
+    font-size: 1rem;
+    
+}
