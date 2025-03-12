@@ -101,9 +101,9 @@ export default function Sidebar(){
                         <li><Link href={""} onClick={OpenCloseCadastros}> <FaAddressCard /> Cadastros</Link>
                         <div className={styles.SubMenu} >
                             <ul className={openCloseMenuCadastros ? styles.open : styles.close}>
-                                <li><Link href={"/category"}><BiSolidCategory />Categoria</Link></li>
-                                <li><Link href={"/"}><FaCopyright />Marcas</Link></li>
-                                <li><Link href={"/"}><FaTshirt />Produtos</Link></li>
+                                <li><Link href={"/categorias"}><BiSolidCategory />Categoria</Link></li>
+                                <li><Link href={"/marcas"}><FaCopyright />Marcas</Link></li>
+                                <li><Link href={"/produtos"}><FaTshirt />Produtos</Link></li>
                                 <li><Link href={"/"}><FaUser />Usuários</Link></li>
                                 <li><Link href={"/"}><FaAddressBook />Clientes</Link></li>
                                 <li><Link href={"/"}><FaTruck />Fornecedores</Link></li>

@@ -5,7 +5,7 @@
 }
 
 :root {
- 
+
   --white: #fff;
   --ice: #f5f8ff;
 
@@ -13,34 +13,61 @@
   --gray-primary: #ced4da;
   --gray-secondary: #e7e7e7;
 
-   --blue : #007bff;
-   --blue-primary: #0069d9;
-   --blue-secondary: #007bff80;
+  --blue: #007bff;
+  --blue-primary: #0069d9;
+  --blue-secondary: #007bff80;
 
+  --ocean: #145893;
 
-   --ligth : #f8f9fa;
-   --ligth-primary : #e2e6ea ;
-   --ligth-secondary : #f8f9fa80;
+  --cyan: #17a2b8;
+  --cyan-primary: #128192;
+  --cyan-secondary: #25c7e0;
 
+  --light-blue: #80bdff;
+  --light-blue-primary: #007bff40;
 
+  --ligth: #f8f9fa;
+  --ligth-primary: #e2e6ea;
+  --ligth-secondary: #f8f9fa80;
 
+  --green: #28a745;
+  --green-primary: #218838;
+  --green-secondary: #28a74580;
 
+  --dark: #23272b;
+  --dark-primary: #343a40;
+  --dark-secondary: #343a4080;
 
+  --dark-gray: #6c757d;
+  --dark-gray-primary: #5a6268;
+  --dark-gray-secondary: #6c757d80;
 
-  --dark : #23272b
+  --danger: #dc3545;
+  --danger-primary: #c82333;
+  --danger-secondary: #dc3545;
+
+  --warning: #ffc107;
+  --warning-primary: #e0a800;
+  --warning-secondary: #ffc10780;
+
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --info: #8950fc;
 }
 
-body{
+body {
   background-color: var(--ligth-primary);
 }
-
-
-
 
 label,
 span {
   color: var(--gray);
   font-size: 0.7rem;
+}
+
+hr {
+  margin: 20px 0px;
+  border: 1px solid #80808036;
 }
 
 a {
@@ -50,7 +77,8 @@ a {
 }
 
 /* BUTTON */
-button, a{
+button,
+a {
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -64,92 +92,142 @@ button, a{
 }
 
 
+.btnNew {
+  color: var(--white);
+  background-color: var(--cyan);
+}
+
+.btnNew:hover {
+  background-color: var(--cyan-primary);
+}
+
+.btnNew:focus {
+  box-shadow: 0 0 0 0.2rem var(--cyan-secondary);
+}
+
 /* PRIMARY */
 .btnPrimary {
-  color: #fff;
-  background-color: #007bff;
+  color: var(--white);
+  background-color: var(--blue);
 }
+
 .btnPrimary:hover {
-  background-color: #0069d9;
+  background-color: var(--blue-primary);
 }
+
 .btnPrimary:focus {
-  box-shadow: 0 0 0 0.2rem #007bff80;
+  box-shadow: 0 0 0 0.2rem var(--blue-secondary);
 }
 
 /* SECONDARY */
 .btnSecondary {
-  color: #fff;
-  background-color: #6c757d;
+  color: var(--white);
+  background-color: var(--dark-gray);
 }
+
 .btnSecondary:hover {
-  background-color: #5a6268;
+  background-color: var(--dark-gray-primary);
 }
+
 .btnSecondary:focus {
-  box-shadow: 0 0 0 0.2rem  rgba(108, 117, 125, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--dark-gray-secondary);
 }
 
 /* SUCCESS */
 .btnSuccess {
-  color: #fff;
-  background-color: #28a745;
+  color: var(--white);
+  background-color: var(--green);
   width: auto;
 }
+
 .btnSuccess:hover {
-  background-color: #218838;
+  background-color: var(--green-primary);
 }
+
 .btnSuccess:focus {
-  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--green-secondary);
 }
 
 /* DANGER */
 .btnDanger {
-  color: #fff;
-  background-color: #dc3545;
+  color: var(--white);
+  background-color: var(--danger)
 }
+
 .btnDanger:hover {
-  background-color: #c82333;
+  background-color: var(--danger-primary)
 }
+
 .btnDanger:focus {
-  color: #fff;
-  background-color: #dc3545;
+  color: var(--white);
+  background-color: var(--danger-secondary)
 }
 
 /* WARNING */
 .btnWarning {
-  color: #212529;
-  background-color: #ffc107;
+  color: var(--white);
+  background-color: var(--warning)
 }
+
 .btnWarning:hover {
-  background-color: #e0a800;
+  background-color: var(--warning-primary)
 }
+
 .btnWarning:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--warning-secondary)
 }
 
 /* DARK */
 .btnDark {
-  color: #fff;
-  background-color: #343a40;
+  color: var(--white);
+  background-color: var(--dark-primary)
 }
+
 .btnDark:hover {
-  background-color: #23272b;
+  background-color: var(--dark)
 }
+
 .btnDark:focus {
-  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--dark-secondary)
 }
+
 /* LIGHT */
 .btnLight {
   color: var(--gray);
-  background-color: #f8f9fa;
-}
-.btnLight:hover {
-  background-color: #e2e6ea;
-}
-.btnLight:focus {
-  box-shadow: 0 0 0 0.2rem #f8f9fa80;
+  background-color: var(--ligth)
 }
 
-input {
+.btnLight:hover {
+  background-color: var(--ligth-primary)
+}
+
+.btnLight:focus {
+  box-shadow: 0 0 0 0.2rem var(--ligth-secondary)
+}
+
+
+
+select{
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--gray-primary);
+  outline: none;
+  transition: 0.4s ease;
+  background-color: var(--ice);
+  cursor: pointer;
+}
+select:hover {
+  background-color: var(--white);
+}
+
+select:focus {
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 0.2rem var(--light-blue-primary);
+  background-color: var(--white);
+}
+
+
+input{
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid var(--gray-primary);
@@ -157,18 +235,31 @@ input {
   transition: 0.4s ease;
   background-color: var(--ice);
 }
+
+
 input:hover {
   background-color: var(--white);
 }
 
 input:focus {
-  border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 0.2rem var(--light-blue-primary);
   background-color: var(--white);
 }
 
-input ::placeholder {
-  color: var(--gray-primary);
+input::placeholder {
+  color: var(--gray);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: last baseline;
+  gap: 10px;
 }
 
 .inputField {
@@ -189,16 +280,55 @@ input ::placeholder {
   width: 350px;
 }
 
-input[type="checkbox"] {
-  cursor: pointer;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: var(--ocean);
+  color: var(--white);
+  font-size: 0.8rem;
+  
+}
+
+thead th {
+  padding: 10px;
+  font-weight: 400;
+}
+
+tbody {
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+tbody td {
+  padding: 5px;
+  
+  /* border-bottom: 1px solid var(--gray-primary); */
+}
+
+tbody tr:hover {
+  background-color: var(--ice);
+}
+
+tbody .BtnAcoesTable {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px;
 }
 
 
-.icons{
+
+
+.icons {
   font-size: 1.2rem;
   color: var(--white);
 }
-.icons:hover{
+
+.icons:hover {
   font-size: 1.2rem;
   color: var(--blue-primary);
 }
@@ -209,16 +339,17 @@ input[type="checkbox"] {
   margin: 10px 0px;
   gap: 5px;
 }
+
 .checkboxWrapper label {
   cursor: pointer;
 }
 
 
-.alert{
-  color: #c82333; /*   colocar em uma variavel  */
+.alertMessage {
+  color: var(--danger-primary);
   font-size: 0.8rem;
 }
 
-.ContainerBtnPagesNavegation{
+.ContainerBtnPagesNavegation {
   display: flex;
 }

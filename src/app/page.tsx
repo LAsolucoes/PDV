@@ -3,7 +3,6 @@ import styles from "./page.module.css";
 import Button from "./components/Button";
 import LogoTipo from "../../public/LogoTipo.jpg";
 import Image from "next/image";
-import { redirect } from "next/navigation";
 
 export default function Login() {
   return (
@@ -20,12 +19,13 @@ export default function Login() {
           <form action="" className={styles.Form}>
             <div className="inputField">
               <label htmlFor="email">Email</label>
-              <input 
-              type="text" 
-              id="email"
-              placeholder="Email"  
-              name="email" 
-              required/>
+              <input
+                type="text"
+                id="email"
+                placeholder="Email"
+                name="email"
+                required
+              />
             </div>
             <div className="inputField">
               <label htmlFor="password">Senha</label>
@@ -38,32 +38,30 @@ export default function Login() {
               />
             </div>
 
-            <div className="checkboxWrapper">
-              <input 
-              type="checkbox" 
-              id="remember" 
-              name="remember" />
-              <label htmlFor="remember">Lembrar-me</label>
+            <div className="checkboxWrapper" title="Marque para ser lembrado no próximo login">
+              <input type="checkbox" id="remember" name="remember" />
+              <label htmlFor="remember" title="Marque para ser lembrado no próximo login">Lembrar-me</label>
             </div>
 
             <div>
-              <Link href={"/resetPassword"} className={styles.ResetPassword}>
+              <Link href={"/resetPassword"} className={styles.ResetPassword} title="Redefinir senha">
                 Esqueci minha senha
               </Link>
             </div>
 
             <div className={styles.FooterForm}>
               <Button
+                icon={""}
                 value={"Logar"}
                 name={"login"}
                 type={"submit"}
                 className={"btnDark"}
-                onClick={()=> redirect("/dashboard")}
+                title={"Acessar"}
               />
-          
+
               <span className={styles.Register}>
                 Não possui uma conta?
-                <Link href={"/register"}>Registrar-se</Link>
+                <Link href={"/register"} title="Registre-se no sistema">Registrar-se</Link>
               </span>
             </div>
           </form>

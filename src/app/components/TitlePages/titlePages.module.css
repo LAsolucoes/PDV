@@ -3,8 +3,8 @@
     flex-direction: column;
 }
 .ConstainerTitle hr{
-    color: var(--gray);
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
+    margin-top: 0px !important;
 }
 .TitlePages{
     margin: 16px 10px;

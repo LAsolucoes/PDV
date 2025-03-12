@@ -27,8 +27,8 @@
     flex-direction: column;
     height: 100vh;
     overflow: auto;
-    margin-top: 10px;
-    line-height: 1.5;
+    margin-top: 30px;
+    line-height: 2;
 }
 
 .Nav a{
@@ -43,7 +43,7 @@
 }
 
 .SubMenu ul{
-    border-left: 2px solid var(--gray);
+    border-left: 3px solid var(--gray);
     margin: 5px 0px 0px 16px;
 }
 

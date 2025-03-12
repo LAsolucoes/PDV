@@ -56,15 +56,20 @@ export default function Register() {
 
             <div className={styles.FooterForm}>
               <Button
+                icon={""}
                 value={"Registrar-se"}
                 name={"login"}
                 type={"submit"}
                 className={"btnDark"}
+                title={"Registrar-se para uma nova conta"}
               />
 
               <span className={styles.Register}>
                 Já possui uma conta?
-                <Link href={"/"}> Login</Link>
+                <Link href={"/"} title="Clique para voltar à página de login">
+                 
+                  Login
+                </Link>
               </span>
             </div>
           </form>
