@@ -1,8 +1,8 @@
 import Link from "next/link";
 import styles from "@/app/page.module.css";
 import "./remember.css";
-import Button from "@/app/components/( Buttons )/Button";
-import ImageEmail from "../../../public/ImageEmail.png";
+import Button from "@/app/_components/( Buttons )/Button";
+import ImageEmail from "../../../../public/ImageEmail.png";
 import Image from "next/image";
 
 export default function Remember() {
@@ -21,7 +21,7 @@ export default function Remember() {
 
             <label className="alertMessage">
               Preencha o email cadastrado no sistema e enviaremos uma nova senha
-              para você.
+              para você!
             </label>
           </div>
 

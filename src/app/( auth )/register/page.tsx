@@ -1,8 +1,8 @@
 import Link from "next/link";
 import styles from "@/app/page.module.css";
 import "./register.css";
-import Button from "@/app/components/( Buttons )/Button";
-import LogoTipo from "../../../public/LogoTipo.jpg";
+import Button from "@/app/_components/( Buttons )/Button";
+import LogoTipo from "../../../../public/LogoTipo.jpg";
 import Image from "next/image";
 
 export default function Register() {

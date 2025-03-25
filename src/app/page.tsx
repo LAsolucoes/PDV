@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./page.module.css";
-import Button from "./components/( Buttons )/Button";
+import Button from "./_components/( Buttons )/Button";
 import LogoTipo from "../../public/LogoTipo.jpg";
 import Image from "next/image";
 
