@@ -65,6 +65,12 @@ span {
   font-size: 0.7rem;
 }
 
+label.required::after{
+  content: "*";
+  color: var(--danger);
+  margin-left: 3px;
+}
+
 hr {
   margin: 20px 0px;
   border: 1px solid #80808036;
@@ -205,6 +211,11 @@ a {
   box-shadow: 0 0 0 0.2rem var(--ligth-secondary)
 }
 
+.btnViewPassword{
+   border: 1px solid var(--dark-gray-secondary);
+   display: flex;
+   margin-left: -8px;
+ }
 
 
 select{
@@ -327,6 +338,7 @@ tbody .BtnAcoesTable {
 
 
 
+
 .icons {
   font-size: 1.2rem;
   color: var(--white);
@@ -346,12 +358,6 @@ tbody .BtnAcoesTable {
 
 .checkboxWrapper label {
   cursor: pointer;
-}
-
-
-.alertMessage {
-  color: var(--danger-primary);
-  font-size: 0.8rem;
 }
 
 .ContainerBtnPagesNavegation {

@@ -12,3 +12,11 @@
     font-size: 1rem;
     
 }
+.AlertInputRequired{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: var(--danger);
+    margin-bottom: 10px;
+
+}

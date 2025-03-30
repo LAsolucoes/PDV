@@ -1,10 +1,11 @@
 import styles from "./titlePages.module.css";
+import { IoWarningOutline } from "react-icons/io5";
 
 interface TitlePagesProps {
   title: string;
 }
 
-export default function TitlePages({ title,  }: TitlePagesProps) {
+export function TitlePages({ title }: TitlePagesProps) {
   return (
     <>
       <div className={styles.ConstainerTitle}>
@@ -15,4 +16,10 @@ export default function TitlePages({ title,  }: TitlePagesProps) {
       </div>
     </>
   );
+}
+
+export function AlertInputRequired(){
+  return(
+    <label className={styles.AlertInputRequired}><IoWarningOutline /> ATENÇÃO : Campos com ( * ) são campos obrigatórios de preenchimento </label>
+  )
 }

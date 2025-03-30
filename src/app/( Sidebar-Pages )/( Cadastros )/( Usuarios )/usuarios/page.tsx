@@ -18,7 +18,7 @@ export default function Category() {
         </div>
 
         <div className="ContainerBtnPagesNavegation">
-          <Link href={"#"} className="btnNew" title="Cadastrar novo Usuário">
+          <Link href={"/novo-usuario"} className="btnNew" title="Cadastrar novo Usuário">
             <IoMdAdd />
             Novo Usuário
           </Link>

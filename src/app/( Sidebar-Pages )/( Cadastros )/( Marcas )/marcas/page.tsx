@@ -18,7 +18,7 @@ export default function Marcas() {
         </div>
 
         <div className="ContainerBtnPagesNavegation">
-          <Link href={"#"} className="btnNew" title="Cadastrar nova Marca">
+          <Link href={"/nova-marca"} className="btnNew" title="Cadastrar nova Marca">
             <IoMdAdd />
             Nova Marca
           </Link>
