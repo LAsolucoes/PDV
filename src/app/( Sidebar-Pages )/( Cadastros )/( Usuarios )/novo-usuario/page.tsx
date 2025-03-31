@@ -5,12 +5,15 @@ import { ButtonViewPassword } from "@/app/_components/( Buttons )/ButtonViewPass
 import { useEffect, useRef, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { FaFileContract } from "react-icons/fa";
+import { Modal } from "@/app/_components/Modal";
 
 export default function NewUser() {
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [passwordVisibleDiscount , setPasswordVisibleDiscount ] = useState(false)
+  const [passwordVisibleDiscount, setPasswordVisibleDiscount] = useState(false);
   const [allowDiscount, setAllowDiscount] = useState(false);
   const inputDiscountPassword = useRef<HTMLInputElement | null>(null);
+  const [modalOpenClose, setModalOpenClose] = useState(false);
 
   function handleViewPassword() {
     setPasswordVisible(!passwordVisible);
@@ -21,7 +24,6 @@ export default function NewUser() {
     setPasswordVisibleDiscount(!passwordVisibleDiscount);
     return;
   }
-
 
   function AllowDiscount(event: React.ChangeEvent<HTMLSelectElement>) {
     const inputValue = event.target.value;
@@ -38,8 +40,9 @@ export default function NewUser() {
     }
   }, [allowDiscount]);
 
-
-
+  function handleCloseModal() {
+    setModalOpenClose(!modalOpenClose);
+  }
 
   return (
     <>
@@ -103,7 +106,14 @@ export default function NewUser() {
         </div>
 
         <div className="inputField">
-          <label htmlFor="route">Rota Padrão</label>
+          <label htmlFor="route">
+            Rota Padrão{" "}
+            <FaFileContract
+              title="Click e saiba mais!"
+              className="iconSaibaMais"
+              onClick={handleCloseModal}
+            />
+          </label>
           <input
             type="text"
             id="route"
@@ -151,7 +161,9 @@ export default function NewUser() {
             <div className="inputField">
               <ButtonViewPassword
                 onClick={handleViewPasswordDiscount}
-                title={passwordVisibleDiscount ? "Ocutar senha" : "Exibir senha"}
+                title={
+                  passwordVisibleDiscount ? "Ocutar senha" : "Exibir senha"
+                }
                 icon={passwordVisibleDiscount ? <FaEyeSlash /> : <FaEye />}
               />
             </div>
@@ -161,6 +173,8 @@ export default function NewUser() {
       <div>
         <ButtonSalvarVoltar name={"salvar"} href={"/marcas"} />
       </div>
+
+      {modalOpenClose && <Modal onClick={handleCloseModal} />}
     </>
   );
 }

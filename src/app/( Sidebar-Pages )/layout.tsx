@@ -1,7 +1,9 @@
 import Layout from "@/app/_components/Layout";
 import styles from "@/app/( Sidebar-Pages )/mainContent.module.css"
 
+
 import React from "react";
+
 
 export default function DashboardLayout({
   children,
@@ -10,10 +12,13 @@ export default function DashboardLayout({
 }) {
   return (
     <>
-      <Layout/>
-      <main className={styles.MainContent}>
-      {children}
-      </main>
+      
+       
+        <Layout/>
+        <main className={styles.MainContent}>
+        {children}
+        </main>
+    
         
      
     </>

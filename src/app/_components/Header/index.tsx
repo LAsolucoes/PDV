@@ -5,7 +5,7 @@ import { BsBasket2Fill } from "react-icons/bs";
 
 import { FaPlay } from "react-icons/fa6";
 import { IoMdMoon } from "react-icons/io";
-import Button from "../( Buttons )/Button";
+import {Button} from "../( Buttons )/Button";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.css";
