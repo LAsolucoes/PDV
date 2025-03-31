@@ -1,4 +1,4 @@
-.ContainerBackground {
+.ModalOverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,19 +8,48 @@
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.898);
     z-index: 99999;
-    transition: background-color 0.6s ease;
-
-}
-
-.Modal{
+  
+  }
+  
+  
+  .ModalContent{
     background-color: white;
-    height: 400px;
-    width: 600px;
     position: absolute;
+    min-height: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
     border-radius: 5px;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .HeaderModal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ .HeaderModal h1{
+    font-size: 1.3rem;
+    color: var(--gray);
+ }
+
+ .MainModal{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    flex-grow: 1;
+    padding: 6px;
+    line-height: 2;
+ }
+
+ .FooterModal{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
 }
 
+.FooterModal button{
+    width: fit-content;
+}

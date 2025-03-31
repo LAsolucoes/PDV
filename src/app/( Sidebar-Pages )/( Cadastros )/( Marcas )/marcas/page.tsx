@@ -1,4 +1,4 @@
-import TitlePages from "@/app/_components/TitlePages";
+import {TitlePages} from "@/app/_components/TitlePages";
 import Link from "next/link";
 import { IoMdAdd } from "react-icons/io";
 import { FaEdit } from "react-icons/fa"; /* EDITAR */
@@ -7,7 +7,7 @@ import { FaCheck } from "react-icons/fa"; /* CHECK */
 import { TiDelete } from "react-icons/ti"; /* NO ATIVO */
 import { IoSearchSharp } from "react-icons/io5"; /* SEARCH */
 
-import Button from "@/app/_components/( Buttons )/Button";
+import {Button} from "@/app/_components/( Buttons )/Button";
 
 export default function Marcas() {
   return (

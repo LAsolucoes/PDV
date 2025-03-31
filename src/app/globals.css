@@ -288,6 +288,28 @@ input[type="checkbox"] {
   margin: 10px 0px;
 }
 
+/* Label com btn Info */
+.labelBtnInfo{
+  display: flex;
+  align-items: last baseline;
+  gap: 4px;
+}
+
+.labelBtnInfo button{
+  font-size: 0.6rem;
+  background-color: transparent;
+  padding: 3px;
+  transition: 0.6s ease;
+  border: 1px solid var(--dark-gray-secondary);
+  margin-bottom: 1px;
+}
+.labelBtnInfo button:hover{
+  background-color: var(--ligth);
+  color: var(--dark);
+  
+}
+
+
 .input-sm {
   width: 150px;
 }
@@ -343,6 +365,8 @@ tbody .BtnAcoesTable {
   gap: 2px;
   margin: 5px;
 }
+
+
 
 
 

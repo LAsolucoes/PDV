@@ -1,26 +1,35 @@
-import styles from "./modal.module.css"
+import styles from "./modal.module.css";
+import { IoCloseSharp } from "react-icons/io5";
 
-interface ModalProps{
-    onClick?: ()=> void
+interface ModalProps {
+  tittle: string;
+  onClick?: () => void;
+  label: string;
+
 }
-export function Modal({onClick }: ModalProps){
-    return(
-        <div className={styles.ContainerBackground}>
- 
-            <div className={styles.Modal}>
-
-            <h1>Minha modal</h1>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut error, commodi perferendis rem, maxime eos, suscipit tenetur dicta perspiciatis non provident? Quam tenetur doloremque perferendis, aliquid harum et assumenda incidunt.
-            <hr />
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione praesentium autem ullam? Dolorum consectetur quibusdam animi unde cupiditate, optio laboriosam explicabo? Eum temporibus quibusdam, voluptatem dolor voluptatibus autem animi laborum.
-            <hr />
-            
-           
-           <button onClick={ onClick }>Close</button>
-
-            </div>
-
-
+export function Modal({ tittle, onClick, label , id }: ModalProps) {
+  return (
+    <div className={styles.ModalOverlay} onClick={onClick}>
+      <div className={styles.ModalContent}>
+        <div className={styles.HeaderModal}>
+          <h1>{tittle}</h1>
+          <button className="btnDanger" onClick={onClick} title="Fechar Modal">
+            <IoCloseSharp />
+          </button>
         </div>
-    )
+        <hr />
+
+        <div className={styles.MainModal}>
+          <p>{label}</p>
+        </div>
+
+        <div className={styles.FooterModal}>
+          <hr />
+          <button onClick={onClick} className="btnDanger" title="Fechar Modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }

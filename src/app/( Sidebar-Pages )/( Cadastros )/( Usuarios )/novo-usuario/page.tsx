@@ -1,3 +1,6 @@
+/* const elementId = (event.target as HTMLElement).id;
+setModalId(elementId);
+setModalOpenClose(!modalOpenClose);  */
 "use client";
 import { TitlePages, AlertInputRequired } from "@/app/_components/TitlePages";
 import { ButtonSalvarVoltar } from "@/app/_components/( Buttons )/ButtonSalvarVoltar";
@@ -14,6 +17,13 @@ export default function NewUser() {
   const [allowDiscount, setAllowDiscount] = useState(false);
   const inputDiscountPassword = useRef<HTMLInputElement | null>(null);
   const [modalOpenClose, setModalOpenClose] = useState(false);
+  const [modalId, setModalId] = useState<string | null>(null);
+
+  function handleOpenCloseModal(e: React.MouseEvent<HTMLButtonElement>) {
+    const elementId = e.currentTarget.id;
+    setModalId(elementId)
+    setModalOpenClose(!modalOpenClose)
+  }
 
   function handleViewPassword() {
     setPasswordVisible(!passwordVisible);
@@ -39,10 +49,6 @@ export default function NewUser() {
       inputDiscountPassword.current.focus();
     }
   }, [allowDiscount]);
-
-  function handleCloseModal() {
-    setModalOpenClose(!modalOpenClose);
-  }
 
   return (
     <>
@@ -106,14 +112,18 @@ export default function NewUser() {
         </div>
 
         <div className="inputField">
-          <label htmlFor="route">
-            Rota Padrão{" "}
-            <FaFileContract
-              title="Click e saiba mais!"
-              className="iconSaibaMais"
-              onClick={handleCloseModal}
-            />
-          </label>
+          <div className="labelBtnInfo">
+            <label id="teste" onClick={handleOpenCloseModal}>Rota Padrão</label>
+            <button
+             title="Click e saiba mais!"
+             className="iconSaibaMais"
+             id="standardRoute"
+             onClick={handleOpenCloseModal}>
+              <FaFileContract
+              
+/>
+            </button>
+          </div>
           <input
             type="text"
             id="route"
@@ -124,7 +134,20 @@ export default function NewUser() {
         </div>
 
         <div className="inputField">
-          <label htmlFor="listPrice">Lista de Preços</label>
+
+        <div className="labelBtnInfo">
+            <label>Lista de Preços</label>
+            <button
+             title="Click e saiba mais!"
+             className="iconSaibaMais"
+             id="standardRoute"
+             onClick={handleOpenCloseModal}>
+              <FaFileContract
+              
+/>
+            </button>
+          </div>
+          
           <select name="listPrice" id="listPrice">
             <option value=""> - - </option>
             <option value="">Atacado</option>
@@ -171,10 +194,16 @@ export default function NewUser() {
         )}
       </div>
       <div>
-        <ButtonSalvarVoltar name={"salvar"} href={"/marcas"} />
+        <ButtonSalvarVoltar name={"salvar"} href={"/usuarios"} />
       </div>
 
-      {modalOpenClose && <Modal onClick={handleCloseModal} />}
+      {modalOpenClose && modalId === "standardRoute" && (
+        <Modal
+          tittle={"ROTA PADRÃO"}
+          onClick={handleOpenCloseModal}
+          label={`A Rota padrão é usada para definir a página para a qual o usuário será redirecionado assim que realizar o login no sistema. Ao cadastrar uma rota padrão para o usuário, você garante que, após a autenticação, ele seja automaticamente levado à página que foi designada pelo administrador do sistema. Por exemplo, ao fazer login, o usuário pode ser direcionado diretamente para uma página específica, como: https://meusistema/pdv.com.br, sem precisar navegar por outras áreas do sistema. Essa funcionalidade facilita a navegação, proporcionando uma experiência mais fluida e objetiva, levando o usuário diretamente ao ponto mais relevante de acordo com a configuração do administrador.`}
+        />
+      )}
     </>
   );
 }
