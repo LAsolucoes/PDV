@@ -1,6 +1,6 @@
 
-import TitlePages from "../../../../_components/TitlePages";
 import Link from "next/link";
+import {TitlePages} from "../../../../_components/TitlePages";
 import { IoMdAdd } from "react-icons/io";
 import { FaEdit } from "react-icons/fa"; /* EDITAR */
 import { MdDeleteForever } from "react-icons/md"; /* DELETE */
@@ -8,9 +8,9 @@ import { RiFileCopy2Fill } from "react-icons/ri"; /* MOVIMENTACOES */
 import { FaCheck } from "react-icons/fa"; /* CHECK */
 import { TiDelete } from "react-icons/ti"; /* NO ATIVO */
 import { IoSearchSharp } from "react-icons/io5"; /* SEARCH */
+import {Button} from "../../../../_components/( Buttons )/Button";
 
 
-import Button from "../../../../_components/( Buttons )/Button";
 
 export default function Clientes() {
   return (
@@ -21,7 +21,7 @@ export default function Clientes() {
         </div>
 
         <div className="ContainerBtnPagesNavegation">
-          <Link href={"#"} className="btnNew" title="Cadastrar novo Cliente">
+          <Link href={"/novo-cliente"} className="btnNew" title="Cadastrar novo Cliente">
             <IoMdAdd />
             Novo Cliente
           </Link>

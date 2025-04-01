@@ -1,6 +1,7 @@
 
-import TitlePages from "../../../../_components/TitlePages";
 import Link from "next/link";
+import Image from "next/image";
+import {TitlePages} from "../../../../_components/TitlePages";
 import { IoMdAdd } from "react-icons/io";
 import { FaEdit } from "react-icons/fa"; /* EDITAR */
 import { MdDeleteForever } from "react-icons/md"; /* DELETE */
@@ -9,10 +10,10 @@ import { RiFileCopy2Fill } from "react-icons/ri"; /* MOVIMENTACOES */
 import { FaCheck } from "react-icons/fa"; /* CHECK */
 import { TiDelete } from "react-icons/ti"; /* NO ATIVO */
 import { IoSearchSharp } from "react-icons/io5"; /* SEARCH */
-import Image from "next/image";
+import { IoCloseSharp } from "react-icons/io5";
+import {Button} from "../../../../_components/( Buttons )/Button";
 import ImageProduct1 from "../../../../../../public/COCA COLA 350ML.png";
 import ImageProduct2 from "../../../../../../public/FANTA LARANJA 350ML.png";
-import Button from "../../../../_components/( Buttons )/Button";
 
 export default function Category() {
   return (
@@ -77,6 +78,14 @@ export default function Category() {
             type={"button"}
             className={"btnPrimary"}
             title={"Pesquisar Categoria"}
+          />
+          <Button
+          icon={<IoCloseSharp />}
+            value={"Limpar filtros"}
+            name={"filterLimp"}
+            type={"button"}
+            className={"btnDanger"}
+            title={"Limpar campos da pesquisa"}
           />
         </div>
         <hr />

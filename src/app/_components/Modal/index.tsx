@@ -3,13 +3,13 @@ import { IoCloseSharp } from "react-icons/io5";
 
 interface ModalProps {
   tittle: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   label: string;
 
 }
-export function Modal({ tittle, onClick, label , id }: ModalProps) {
+export function Modal({ tittle, onClick, label  }: ModalProps) {
   return (
-    <div className={styles.ModalOverlay} onClick={onClick}>
+    <div className={styles.ModalOverlay}>
       <div className={styles.ModalContent}>
         <div className={styles.HeaderModal}>
           <h1>{tittle}</h1>

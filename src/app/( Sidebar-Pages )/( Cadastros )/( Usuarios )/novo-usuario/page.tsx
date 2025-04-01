@@ -113,15 +113,13 @@ export default function NewUser() {
 
         <div className="inputField">
           <div className="labelBtnInfo">
-            <label id="teste" onClick={handleOpenCloseModal}>Rota Padrão</label>
+            <label>Rota Padrão</label>
             <button
              title="Click e saiba mais!"
              className="iconSaibaMais"
              id="standardRoute"
              onClick={handleOpenCloseModal}>
-              <FaFileContract
-              
-/>
+              <FaFileContract/>
             </button>
           </div>
           <input
@@ -140,15 +138,13 @@ export default function NewUser() {
             <button
              title="Click e saiba mais!"
              className="iconSaibaMais"
-             id="standardRoute"
+             id="listPrice"
              onClick={handleOpenCloseModal}>
-              <FaFileContract
-              
-/>
+              <FaFileContract/>
             </button>
           </div>
           
-          <select name="listPrice" id="listPrice">
+          <select name="listPrice">
             <option value=""> - - </option>
             <option value="">Atacado</option>
             <option value="">Varejo</option>
@@ -202,6 +198,15 @@ export default function NewUser() {
           tittle={"ROTA PADRÃO"}
           onClick={handleOpenCloseModal}
           label={`A Rota padrão é usada para definir a página para a qual o usuário será redirecionado assim que realizar o login no sistema. Ao cadastrar uma rota padrão para o usuário, você garante que, após a autenticação, ele seja automaticamente levado à página que foi designada pelo administrador do sistema. Por exemplo, ao fazer login, o usuário pode ser direcionado diretamente para uma página específica, como: https://meusistema/pdv.com.br, sem precisar navegar por outras áreas do sistema. Essa funcionalidade facilita a navegação, proporcionando uma experiência mais fluida e objetiva, levando o usuário diretamente ao ponto mais relevante de acordo com a configuração do administrador.`}
+        />
+      )}
+
+      {modalOpenClose && modalId === "listPrice" && (
+        <Modal 
+        tittle={"LISTA DE PREÇOS"}
+        onClick={handleOpenCloseModal}
+          label={"Ao atribuir uma lista de preços a um usuário, ele terá acesso apenas a essa lista específica para realizar as vendas. Isso permite que o sistema tenha diferentes listas de preços cadastradas, como ATACADO e VAREJO, com valores distintos para cada tipo de venda. Por exemplo, na lista de atacado os preços são mais baixos, enquanto na lista de varejo os valores são mais altos.Essa funcionalidade permite que você atribua uma única lista de preços ou múltiplas listas a um usuário, conforme necessário.Além disso, é possível direcionar cada caixa de venda para um tipo específico de operação, como ATACADO e VAREJO, garantindo que os preços corretos sejam aplicados dependendo do tipo de cliente ou do ponto de venda.  "}
+        
         />
       )}
     </>

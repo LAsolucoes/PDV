@@ -1,15 +1,16 @@
 import { ButtonSalvarVoltar } from "@/app/_components/( Buttons )/ButtonSalvarVoltar";
-import TitlePages from "@/app/_components/TitlePages";
+import {AlertInputRequired, TitlePages} from "@/app/_components/TitlePages";
 
 export default function NewMark() {
   return (
     <>
       <div>
         <TitlePages title={"NOVA MARCA"} />
+        <AlertInputRequired />
 
         <div className="fieldGroup">
           <div className="inputField">
-            <label>Nome</label>
+            <label className="required">Nome</label>
             <input
               type="text"
               className="input-md"
@@ -20,8 +21,8 @@ export default function NewMark() {
           </div>
 
           <div className="inputField">
-            <label>Ativo</label>
-            <select name="" id="">
+            <label className="required">Ativo</label>
+            <select name="" required>
               <option value="">Sim</option>
               <option value="">Não</option>
             </select>
