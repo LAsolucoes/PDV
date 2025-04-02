@@ -65,10 +65,24 @@ span {
   font-size: 0.7rem;
 }
 
-label.required::after{
+label.required::after {
   content: "*";
   color: var(--danger);
   margin-left: 3px;
+}
+
+textarea {
+  display: flex;
+  width: 100%;
+  border: 1px solid var(--gray-primary);
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.6s ease;
+}
+textarea:focus {
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 0.2rem var(--light-blue-primary);
 }
 
 hr {
@@ -211,23 +225,24 @@ a {
   box-shadow: 0 0 0 0.2rem var(--ligth-secondary)
 }
 
-.btnViewPassword{
-   border: 1px solid var(--dark-gray-secondary);
-   display: flex;
-   margin-left: -5px;
-   padding: 7px;
-   align-items: center;
-   justify-content: center;
-   background-color: var(--ice);
-   transition: 0.6s ease;
+.btnViewPassword {
+  border: 1px solid var(--dark-gray-secondary);
+  display: flex;
+  margin-left: -5px;
+  padding: 7px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ice);
+  transition: 0.6s ease;
 
- }
-.btnViewPassword:hover{
-   background-color: var(--white);
-  }
+}
+
+.btnViewPassword:hover {
+  background-color: var(--white);
+}
 
 
-select{
+select {
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid var(--gray-primary);
@@ -236,6 +251,7 @@ select{
   background-color: var(--ice);
   cursor: pointer;
 }
+
 select:hover {
   background-color: var(--white);
 }
@@ -247,7 +263,7 @@ select:focus {
 }
 
 
-input{
+input {
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid var(--gray-primary);
@@ -289,13 +305,13 @@ input[type="checkbox"] {
 }
 
 /* Label com btn Info */
-.labelBtnInfo{
+.labelBtnInfo {
   display: flex;
   align-items: last baseline;
   gap: 4px;
 }
 
-.labelBtnInfo button{
+.labelBtnInfo button {
   font-size: 0.6rem;
   background-color: transparent;
   padding: 3px;
@@ -303,10 +319,11 @@ input[type="checkbox"] {
   border: 1px solid var(--dark-gray-secondary);
   margin-bottom: 1px;
 }
-.labelBtnInfo button:hover{
+
+.labelBtnInfo button:hover {
   background-color: var(--ligth);
   color: var(--dark);
-  
+
 }
 
 
@@ -332,7 +349,7 @@ thead {
   background-color: var(--ocean);
   color: var(--white);
   font-size: 0.8rem;
-  
+
 }
 
 thead th {
@@ -351,7 +368,8 @@ tbody td {
   text-align: center;
 
 }
-tbody tr{
+
+tbody tr {
   border-bottom: 1px solid var(--gray-primary);
 }
 
@@ -370,11 +388,12 @@ tbody .BtnAcoesTable {
 
 
 
-.iconSaibaMais{
+.iconSaibaMais {
   color: var(--blue);
   cursor: pointer;
 }
-.iconSaibaMais:hover{
+
+.iconSaibaMais:hover {
   color: var(--blue-primary);
   cursor: pointer;
 }
