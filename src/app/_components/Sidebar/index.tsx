@@ -14,6 +14,8 @@ import { BiSolidCategory } from "react-icons/bi"; /* CATEGOTY */
 import { FaCopyright } from "react-icons/fa6";
 import { FaTshirt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
+import { FaUserGroup } from "react-icons/fa6";
+
 import { FaAddressBook } from "react-icons/fa";
 import { FaTruck } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
@@ -105,6 +107,7 @@ export default function Sidebar(){
                                 <li><Link href={"/marcas"}><FaCopyright />Marcas</Link></li>
                                 <li><Link href={"/produtos"}><FaTshirt />Produtos</Link></li>
                                 <li><Link href={"/usuarios"}><FaUser />Usuários</Link></li>
+                                <li><Link href={"/funcionarios"}><FaUserGroup />Funcionários</Link></li>
                                 <li><Link href={"/clientes"}><FaAddressBook />Clientes</Link></li>
                                 <li><Link href={"/fornecedores"}><FaTruck />Fornecedores</Link></li>
                                 <li><Link href={"/servicos"}><FaTools />Serviços</Link></li>

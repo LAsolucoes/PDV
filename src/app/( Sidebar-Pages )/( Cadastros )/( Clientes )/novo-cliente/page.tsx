@@ -1,9 +1,11 @@
 "use client";
 import { Button } from "@/app/_components/( Buttons )/Button";
 import { ButtonSalvarVoltar } from "@/app/_components/( Buttons )/ButtonSalvarVoltar";
+import { ImageHandler } from "@/app/_components/ImageHandler";
 import { AlertInputRequired, TitlePages } from "@/app/_components/TitlePages";
 import React, { useState } from "react";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
+
 
 export default function NewClient() {
   const [selectType, setSelectType] = useState(false);
@@ -217,7 +219,7 @@ export default function NewClient() {
       </div>
 
       <div className="fieldGroup">
-        
+       <ImageHandler />
       </div>
 
       <ButtonSalvarVoltar name={"Salvar"} href={"/clientes"} />

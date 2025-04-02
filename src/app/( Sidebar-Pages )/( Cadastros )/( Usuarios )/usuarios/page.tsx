@@ -9,7 +9,7 @@ import { TiDelete } from "react-icons/ti"; /* NO ATIVO */
 import { IoSearchSharp } from "react-icons/io5"; /* SEARCH */
 import {Button} from "../../../../_components/( Buttons )/Button";
 
-export default function Category() {
+export default function User() {
   return (
     <>
     

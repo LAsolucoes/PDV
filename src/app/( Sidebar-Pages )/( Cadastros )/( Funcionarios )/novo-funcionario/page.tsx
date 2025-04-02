@@ -1,12 +1,14 @@
 "use client";
 import { Button } from "@/app/_components/( Buttons )/Button";
 import { ButtonSalvarVoltar } from "@/app/_components/( Buttons )/ButtonSalvarVoltar";
+import { ImageHandler } from "@/app/_components/ImageHandler";
 import { AlertInputRequired, TitlePages } from "@/app/_components/TitlePages";
 import React, { useState } from "react";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
+import { FaFileContract } from "react-icons/fa";
+import { Modal } from "@/app/_components/Modal";
 
-
-export default function NewClient() {
+export default function NewEmployees() {
   const [selectType, setSelectType] = useState(false);
   const [inputInscricaoEstadual, setInputInscricaoEstadual] =
     useState("Inscrição Estadual");
@@ -14,10 +16,19 @@ export default function NewClient() {
   const [inputRazaoSocial, setInputRazaoSocial] = useState("Razão Social");
   const [inputNomeFantasia, setInputNomeFantasia] = useState("Nome Fantasia");
 
+  const [modalOpenClose, setModalOpenClose] = useState(false);
+  const [modalId, setModalId] = useState<string | null>(null);
+
+  function HandleOpenCloseModal(e: React.MouseEvent<HTMLButtonElement>) {
+    const elementId = e.currentTarget.id;
+    setModalId(elementId);
+    setModalOpenClose(!modalOpenClose);
+  }
+
   function HandleTypeClient(e: React.ChangeEvent<HTMLSelectElement>) {
     const valueSelect = e.target.value;
     if (valueSelect !== "cnpj") {
-      setSelectType(!selectType);
+      setSelectType(true);
       setInputType("CPF");
       setInputRazaoSocial("Nome");
       setInputNomeFantasia("Apelido");
@@ -25,7 +36,7 @@ export default function NewClient() {
 
       return;
     }
-    setSelectType(selectType);
+    setSelectType(false);
     setInputType("CNPJ");
     setInputRazaoSocial("Razão Social");
     setInputNomeFantasia("Nome Fantasia");
@@ -36,7 +47,7 @@ export default function NewClient() {
   return (
     <>
       <div>
-        <TitlePages title={"NOVO FORNECEDOR"} />
+        <TitlePages title={"NOVO FUNCIONÁRIO"} />
         <AlertInputRequired />
       </div>
 
@@ -113,7 +124,6 @@ export default function NewClient() {
         <div className="inputField">
           <label>UF</label>
           <select id="estado" name="estado">
-            <option value="">Selecione</option>
             <option value="AC">Acre</option>
             <option value="AL">Alagoas</option>
             <option value="AP">Amapá</option>
@@ -167,16 +177,46 @@ export default function NewClient() {
 
       <div className="fieldGroup">
         <div className="inputField">
-          <label>Limite de Crédito</label>
-          <input type="text" placeholder="R$ 500,00" />
+          <label>Salário</label>
+          <input type="text" placeholder="R$ 1.500,00" />
         </div>
 
         <div className="inputField">
-          <label>Chave PIX</label>
-          <input type="text" className="input-md" />
+          <label>Comissão</label>
+          <input type="text" placeholder="10%" className="input-sm" />
         </div>
 
-      
+        <div className="inputField">
+          <label>Codigo</label>
+          <input type="text" className="input-sm" />
+        </div>
+
+        <div className="inputField">
+          <div className="labelBtnInfo">
+            <label>Usuário</label>
+            <button
+              title="Click e saiba mais!"
+              className="iconSaibaMais"
+              id="assignUser"
+              onClick={HandleOpenCloseModal}
+            >
+              <FaFileContract />
+            </button>
+          </div>
+          <select name="" required onChange={HandleTypeClient}>
+            <option value=""> - - </option>
+            <option value="cnpj">Sim</option>
+            <option value="cpf">Não</option>
+          </select>
+        </div>
+
+        {selectType && (
+          <div className="inputField">
+            <label htmlFor="">Data de Nascimento</label>
+            <input type="date" />
+          </div>
+        )}
+
         <div className="inputField">
           <label className="required">Ativo</label>
           <select name="" required onChange={HandleTypeClient}>
@@ -198,7 +238,21 @@ export default function NewClient() {
         </div>
       </div>
 
-      <ButtonSalvarVoltar name={"Salvar"} href={"/clientes"} />
+      <div className="fieldGroup">
+        <ImageHandler />
+      </div>
+
+      <ButtonSalvarVoltar name={"Salvar"} href={"/funcionarios"} />
+
+      {modalOpenClose && modalId === "assignUser" &&(
+        <Modal
+          tittle={"ATRIBUIR FUNCIONARIO AO USUÁRIO"}
+          onClick={HandleOpenCloseModal}
+          label={
+            "Ao selecionar a opção de pagar comissão ao funcionário, você pode atribuir um usuário específico do sistema responsável pelos cálculos das comissões de vendas. Caso não selecione nenhum usuário, o funcionário receberá a comissão com base em todas as vendas registradas no sistema. Dessa forma, você terá flexibilidade para atribuir uma comissão individualizada para cada usuário, levando em consideração suas vendas, ou pagar uma comissão com base no total geral de vendas realizadas.  "
+          }
+        />
+      )}
     </>
   );
 }

@@ -1,0 +1,18 @@
+.ContainerImage{
+    border: 1px solid var(--gray-primary);
+    border-radius:  5px;
+    padding: 5px;
+}
+.Image{
+    padding: 5px;
+    border: 1px solid var(--gray-secondary);
+    margin-bottom: 10px;
+}
+
+.SaveRemoveImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import {TitlePages} from "../../../../_components/TitlePages";
+import Link from "next/link";
 import { IoMdAdd } from "react-icons/io";
 import { FaEdit } from "react-icons/fa"; /* EDITAR */
 import { MdDeleteForever } from "react-icons/md"; /* DELETE */
@@ -7,21 +7,20 @@ import { RiFileCopy2Fill } from "react-icons/ri"; /* MOVIMENTACOES */
 import { FaCheck } from "react-icons/fa"; /* CHECK */
 import { TiDelete } from "react-icons/ti"; /* NO ATIVO */
 import { IoSearchSharp } from "react-icons/io5"; /* SEARCH */
-
-
 import {Button} from "../../../../_components/( Buttons )/Button";
 
-export default function Fornecedores() {
+export default function Employees() {
   return (
     <>
+    
         <div>
-          <TitlePages title={"FORNECEDORES"} />
+          <TitlePages title={"FUNCIONÁRIOS"} />
         </div>
 
         <div className="ContainerBtnPagesNavegation">
-          <Link href={"/novo-fornecedor"} className="btnNew" title="Cadastrar novo Fornecedor">
+          <Link href={"/novo-funcionario"} className="btnNew" title="Cadastrar novo Usuário">
             <IoMdAdd />
-            Novo Fornecedor
+            Novo Funcionário
           </Link>
         </div>
 
@@ -31,14 +30,14 @@ export default function Fornecedores() {
             <input
               className="input-md"
               type="text"
-              placeholder="Pesquise o nome do fornecedor..."
+              placeholder="Pesquise o nome do funcionário..."
             />
           </div>
         
           <div className="inputField">
             <label>Ativo</label>
             <select>
-              <option value="">- -</option>
+              <option value=""> - -</option>
               <option value="">Sim</option>
               <option value="">Não</option>
             </select>
@@ -47,10 +46,10 @@ export default function Fornecedores() {
           <Button
             icon={<IoSearchSharp />}
             value={"Pesquisar"}
-            name={"filter"}
+            name={"filterCategory"}
             type={"button"}
             className={"btnPrimary"}
-            title={"Pesquisar Fornecedor"}
+            title={"Pesquisar Usuário"}
           />
         </div>
         <hr />
@@ -67,8 +66,6 @@ export default function Fornecedores() {
               <th>Ações</th>
               <th>Nome</th>
               <th>Email</th>
-              <th>Endereço</th>
-              <th>Contato</th>
               <th>Data de Cadastro</th>
               <th>Usuário</th>
               <th>Ativo</th>
@@ -102,10 +99,8 @@ export default function Fornecedores() {
                 />
               </td>
               
-              <td>Nome do Fornecedor</td>
-              <td>fornecedor@com.br</td>
-              <td>Rua dev lasolucoes</td>
-              <td>11 94045-1410</td>
+              <td>Nome do funcionário</td>
+              <td>email@email.com.br</td>
               <td>12/03/2025 08:54</td>
               <td>Nome do Usuário</td>
               <td>
@@ -140,10 +135,8 @@ export default function Fornecedores() {
                 />
               </td>
               
-              <td>Nome do usuário</td>
-              <td>fornecedor@emial.com.br</td>
-              <td>Av Aricanduva </td>
-              <td>11 94001-6064</td>
+              <td>Nome do funcionário</td>
+              <td>email@emial.com.br</td>
               <td>12/03/2025 08:54</td>
               <td>Nome do Usuário</td>
               <td>
@@ -152,7 +145,7 @@ export default function Fornecedores() {
             </tr>
           </tbody>
         </table>
-      
+     
     </>
   );
 }
