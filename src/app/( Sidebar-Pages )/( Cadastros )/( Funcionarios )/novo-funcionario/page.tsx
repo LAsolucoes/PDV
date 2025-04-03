@@ -3,29 +3,32 @@ import { Button } from "@/app/_components/( Buttons )/Button";
 import { ButtonSalvarVoltar } from "@/app/_components/( Buttons )/ButtonSalvarVoltar";
 import { ImageHandler } from "@/app/_components/ImageHandler";
 import { AlertInputRequired, TitlePages } from "@/app/_components/TitlePages";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 import { FaFileContract } from "react-icons/fa";
 import { Modal } from "@/app/_components/Modal";
 
 export default function NewEmployees() {
   const [selectType, setSelectType] = useState(false);
-  const [inputInscricaoEstadual, setInputInscricaoEstadual] =
-    useState("Inscrição Estadual");
   const [inputType, setInputType] = useState("CNPJ");
   const [inputRazaoSocial, setInputRazaoSocial] = useState("Razão Social");
   const [inputNomeFantasia, setInputNomeFantasia] = useState("Nome Fantasia");
+  const [inputInscricaoEstadual, setInputInscricaoEstadual] =
+    useState("Inscrição Estadual");
 
   const [modalOpenClose, setModalOpenClose] = useState(false);
   const [modalId, setModalId] = useState<string | null>(null);
 
-  function HandleOpenCloseModal(e: React.MouseEvent<HTMLButtonElement>) {
-    const elementId = e.currentTarget.id;
-    setModalId(elementId);
-    setModalOpenClose(!modalOpenClose);
-  }
+  const [isCommission, setIsCommission] = useState(false);
+  const [typeCommissionMoney, setTypeCommissionMoney] = useState(false);
+  const [typeCommissionPorcentage, setTypeCommissionPorcentage] =
+    useState(false);
 
-  function HandleTypeClient(e: React.ChangeEvent<HTMLSelectElement>) {
+  const typeCommissionRef = useRef<HTMLSelectElement>(null);
+  const typeMoneyRef = useRef<HTMLInputElement>(null);
+  const typePorcentageRef = useRef<HTMLInputElement>(null);
+
+  function HandleTypeEmployees(e: React.ChangeEvent<HTMLSelectElement>) {
     const valueSelect = e.target.value;
     if (valueSelect !== "cnpj") {
       setSelectType(true);
@@ -44,6 +47,55 @@ export default function NewEmployees() {
     return;
   }
 
+  function HandleIsComission(e: React.ChangeEvent<HTMLSelectElement>) {
+    const selectComission = e.currentTarget.value;
+    if (selectComission === "commission") {
+      setIsCommission(true);
+      return;
+    }
+    setIsCommission(false);
+    setTypeCommissionMoney(false);
+    setTypeCommissionPorcentage(false);
+    return;
+  }
+
+  useEffect(() => {
+    if (isCommission) {
+      typeCommissionRef.current?.focus();
+      HandleOpenCloseModal();
+    }
+  }, [isCommission]);
+
+  function HandleTypeCommission(e: React.ChangeEvent<HTMLSelectElement>) {
+    const selectTypeCommission = e.currentTarget.value;
+    if (selectTypeCommission === "money") {
+      setTypeCommissionMoney(true);
+      setTypeCommissionPorcentage(false);
+      return;
+    }
+    if (selectTypeCommission === "percentage") {
+      setTypeCommissionMoney(false);
+      setTypeCommissionPorcentage(true);
+      return;
+    }
+    setTypeCommissionMoney(false);
+    setTypeCommissionPorcentage(false);
+  }
+
+  useEffect(() => {
+    if (typeCommissionMoney) typeMoneyRef.current?.focus();
+  }, [typeCommissionMoney]);
+
+  useEffect(() => {
+    if (typeCommissionPorcentage) typePorcentageRef.current?.focus();
+  }, [typeCommissionPorcentage]);
+
+  const HandleOpenCloseModal = () => {
+    const elementId = "assignUser";
+    setModalId(elementId);
+    setModalOpenClose((prev) => !prev);
+  };
+
   return (
     <>
       <div>
@@ -54,7 +106,7 @@ export default function NewEmployees() {
       <div className="fieldGroup">
         <div className="inputField">
           <label className="required">CNPJ | CPF </label>
-          <select name="" required onChange={HandleTypeClient}>
+          <select name="" required onChange={HandleTypeEmployees}>
             <option value="cnpj">CNPJ</option>
             <option value="cpf">CPF</option>
           </select>
@@ -176,6 +228,12 @@ export default function NewEmployees() {
       </div>
 
       <div className="fieldGroup">
+        {selectType && (
+          <div className="inputField">
+            <label htmlFor="">Data de Nascimento</label>
+            <input type="date" />
+          </div>
+        )}
         <div className="inputField">
           <label>Salário</label>
           <input type="text" placeholder="R$ 1.500,00" />
@@ -183,13 +241,56 @@ export default function NewEmployees() {
 
         <div className="inputField">
           <label>Comissão</label>
-          <input type="text" placeholder="10%" className="input-sm" />
+          <select name="" required onChange={HandleIsComission}>
+            <option value=""> - - </option>
+            <option value="commission">Sim</option>
+            <option value="noCommission">Não</option>
+          </select>
         </div>
 
-        <div className="inputField">
-          <label>Codigo</label>
-          <input type="text" className="input-sm" />
-        </div>
+        {isCommission && (
+          <div className="inputField">
+            <label className="required">Tipo de comissão</label>
+            <select
+              name=""
+              ref={typeCommissionRef}
+              required
+              onChange={HandleTypeCommission}
+            >
+              <option value=""> - - </option>
+              <option value="money">Valor R$</option>
+              <option value="percentage">Porcentagem %</option>
+            </select>
+          </div>
+        )}
+
+        {typeCommissionMoney && (
+          <div className="inputField">
+            <label htmlFor="" className="required">
+              Valor R$
+            </label>
+            <input
+              type="text"
+              placeholder="R$ 0,00"
+              required
+              ref={typeMoneyRef}
+            />
+          </div>
+        )}
+
+        {typeCommissionPorcentage && (
+          <div className="inputField">
+            <label htmlFor="" className="required">
+              Porcentagem
+            </label>
+            <input
+              type="text"
+              placeholder="%"
+              required
+              ref={typePorcentageRef}
+            />
+          </div>
+        )}
 
         <div className="inputField">
           <div className="labelBtnInfo">
@@ -203,23 +304,16 @@ export default function NewEmployees() {
               <FaFileContract />
             </button>
           </div>
-          <select name="" required onChange={HandleTypeClient}>
+          <select name="" required>
             <option value=""> - - </option>
-            <option value="cnpj">Sim</option>
-            <option value="cpf">Não</option>
+            <option value="">Usuário 1</option>
+            <option value="">Usuário 2</option>
           </select>
         </div>
 
-        {selectType && (
-          <div className="inputField">
-            <label htmlFor="">Data de Nascimento</label>
-            <input type="date" />
-          </div>
-        )}
-
         <div className="inputField">
           <label className="required">Ativo</label>
-          <select name="" required onChange={HandleTypeClient}>
+          <select name="" required>
             <option value="cnpj">Sim</option>
             <option value="cpf">Não</option>
           </select>
@@ -244,7 +338,7 @@ export default function NewEmployees() {
 
       <ButtonSalvarVoltar name={"Salvar"} href={"/funcionarios"} />
 
-      {modalOpenClose && modalId === "assignUser" &&(
+      {modalOpenClose && modalId === "assignUser" && (
         <Modal
           tittle={"ATRIBUIR FUNCIONARIO AO USUÁRIO"}
           onClick={HandleOpenCloseModal}
