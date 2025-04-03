@@ -29,7 +29,7 @@ export default function NewCategory() {
         </div>
 
         <div>
-          <ButtonSalvarVoltar name={"salvar"} href={"/categorias"} />
+          <ButtonSalvarVoltar name={"salvar"} href={"/categorias"}/>
         </div>
       </div>
     </>

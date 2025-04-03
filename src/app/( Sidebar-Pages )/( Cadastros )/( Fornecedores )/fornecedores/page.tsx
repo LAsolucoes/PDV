@@ -11,7 +11,7 @@ import { IoSearchSharp } from "react-icons/io5"; /* SEARCH */
 
 import {Button} from "../../../../_components/( Buttons )/Button";
 
-export default function Fornecedores() {
+export default function Suppliers() {
   return (
     <>
         <div>
@@ -58,6 +58,11 @@ export default function Fornecedores() {
         <div>
           <label>
             Total de Registros: <span>2</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            Total de Registros da Pesquisa: <span>2</span>
           </label>
         </div>
 

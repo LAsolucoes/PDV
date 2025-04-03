@@ -40,8 +40,8 @@ export default function Category() {
             <label>Ativo</label>
             <select>
               <option value="">Todas</option>
-              <option value="">Sim</option>
-              <option value="">Não</option>
+              <option value="">Ativo</option>
+              <option value="">Inativo</option>
             </select>
           </div>
 
@@ -58,7 +58,12 @@ export default function Category() {
 
         <div>
           <label>
-            Total de Registros: <span>2</span>
+            Total de Registros Cadastrados: <span>2</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            Total de Registros da Pesquisa: <span>2</span>
           </label>
         </div>
 
@@ -114,7 +119,7 @@ export default function Category() {
                   value={""}
                   name={"BtnAcoesEdit"}
                   className={"btnDanger"}
-                  title={"Deletar Cadastro"}
+                  title={"Excluir Cadastro"}
                 />
               </td>
 

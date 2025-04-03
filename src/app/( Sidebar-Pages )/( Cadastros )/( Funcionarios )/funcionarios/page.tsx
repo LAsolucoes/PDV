@@ -18,7 +18,7 @@ export default function Employees() {
         </div>
 
         <div className="ContainerBtnPagesNavegation">
-          <Link href={"/novo-funcionario"} className="btnNew" title="Cadastrar novo Usuário">
+          <Link href={"/novo-funcionario"} className="btnNew" title="Cadastrar novo Funcionário">
             <IoMdAdd />
             Novo Funcionário
           </Link>
@@ -37,9 +37,9 @@ export default function Employees() {
           <div className="inputField">
             <label>Ativo</label>
             <select>
-              <option value=""> - -</option>
-              <option value="">Sim</option>
-              <option value="">Não</option>
+              <option value="">Todos</option>
+              <option value="">Ativo</option>
+              <option value="">Inátivo</option>
             </select>
           </div>
 
@@ -49,7 +49,7 @@ export default function Employees() {
             name={"filterCategory"}
             type={"button"}
             className={"btnPrimary"}
-            title={"Pesquisar Usuário"}
+            title={"Pesquisar Funcionário"}
           />
         </div>
         <hr />
@@ -57,6 +57,11 @@ export default function Employees() {
         <div>
           <label>
             Total de Registros: <span>2</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            Total de Registros da Pesquisa: <span>2</span>
           </label>
         </div>
 

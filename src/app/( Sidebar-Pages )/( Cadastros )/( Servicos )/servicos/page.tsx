@@ -1,4 +1,4 @@
-import TitlePages from "../../../../_components/TitlePages";
+import {TitlePages} from "../../../../_components/TitlePages";
 import Link from "next/link";
 import { IoMdAdd } from "react-icons/io";
 import { FaEdit } from "react-icons/fa"; /* EDITAR */
@@ -7,9 +7,9 @@ import { FaCheck } from "react-icons/fa"; /* CHECK */
 import { TiDelete } from "react-icons/ti"; /* NO ATIVO */
 import { IoSearchSharp } from "react-icons/io5"; /* SEARCH */
 
-import Button from "../../../../_components/( Buttons )/Button";
+import {Button} from "../../../../_components/( Buttons )/Button";
 
-export default function Category() {
+export default function Services() {
   return (
     <>
 
@@ -38,8 +38,8 @@ export default function Category() {
             <label>Ativo</label>
             <select>
               <option value="">Todas</option>
-              <option value="">Sim</option>
-              <option value="">Não</option>
+              <option value="">Ativo</option>
+              <option value="">Inátivo</option>
             </select>
           </div>
 

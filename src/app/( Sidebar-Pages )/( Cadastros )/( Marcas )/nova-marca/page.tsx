@@ -1,7 +1,7 @@
 import { ButtonSalvarVoltar } from "@/app/_components/( Buttons )/ButtonSalvarVoltar";
 import {AlertInputRequired, TitlePages} from "@/app/_components/TitlePages";
 
-export default function NewMark() {
+export default function NewBrands() {
   return (
     <>
       <div>

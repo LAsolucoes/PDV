@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 
 
-export default function NewClient() {
+export default function NewSuppliers() {
   const [selectType, setSelectType] = useState(false);
   const [inputInscricaoEstadual, setInputInscricaoEstadual] =
     useState("Inscrição Estadual");

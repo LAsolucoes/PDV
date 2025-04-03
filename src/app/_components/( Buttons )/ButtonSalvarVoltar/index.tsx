@@ -8,18 +8,18 @@ import styles from "./buttonSalvarVoltar.module.css";
 interface ButtonSalvarVoltarProps {
   name: string;
   href: string;
+  
 }
-
-export function ButtonSalvarVoltar({ name, href }: ButtonSalvarVoltarProps) {
+export function ButtonSalvarVoltar({ name, href  }: ButtonSalvarVoltarProps) {
   return (
     <div>
       <hr />
       <div className={styles.ButtonSalvarVoltar}>
-        <button name={name} className="btnSuccess" type="submit">
+        <button name={name} className="btnSuccess" type="submit" title="Salvar">
           {" "}
           <FaCheck /> Salvar{" "}
         </button>
-        <Link href={href} className="btnDanger">
+        <Link href={href} className="btnDanger" title="Voltar">
           <FaArrowLeft /> Voltar{" "}
         </Link>
       </div>

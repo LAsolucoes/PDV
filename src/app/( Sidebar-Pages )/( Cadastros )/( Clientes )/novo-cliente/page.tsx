@@ -5,7 +5,8 @@ import { ImageHandler } from "@/app/_components/ImageHandler";
 import { AlertInputRequired, TitlePages } from "@/app/_components/TitlePages";
 import React, { useState } from "react";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
-
+import { Modal } from "@/app/_components/Modal";
+import { ButtonInfo } from "@/app/_components/( Buttons )/ButtonInfo";
 
 export default function NewClient() {
   const [selectType, setSelectType] = useState(false);
@@ -14,6 +15,15 @@ export default function NewClient() {
   const [inputType, setInputType] = useState("CNPJ");
   const [inputRazaoSocial, setInputRazaoSocial] = useState("Razão Social");
   const [inputNomeFantasia, setInputNomeFantasia] = useState("Nome Fantasia");
+
+  const [modalOpenClose, setModalOpenClose] = useState(false);
+  const [modalId, setModalId] = useState<string | null>(null);
+
+  function HandleOpenCloseModal(e: React.MouseEvent<HTMLButtonElement>) {
+    const elementId = e.currentTarget.id;
+    setModalId(elementId);
+    setModalOpenClose(true);
+  }
 
   function HandleTypeClient(e: React.ChangeEvent<HTMLSelectElement>) {
     const valueSelect = e.target.value;
@@ -167,7 +177,14 @@ export default function NewClient() {
 
       <div className="fieldGroup">
         <div className="inputField">
-          <label>Limite de Crédito</label>
+          <div className="labelBtnInfo">
+            <label>Limite de Crédito</label>
+           <ButtonInfo 
+           id={"creditLimit"}
+           onClick={HandleOpenCloseModal}
+           
+           />
+          </div>
           <input type="text" placeholder="R$ 500,00" />
         </div>
 
@@ -219,10 +236,19 @@ export default function NewClient() {
       </div>
 
       <div className="fieldGroup">
-       <ImageHandler />
+        <ImageHandler />
       </div>
 
       <ButtonSalvarVoltar name={"Salvar"} href={"/clientes"} />
+      {modalOpenClose && modalId === "creditLimit" && (
+            <Modal
+              tittle="LIMITE DE CRÉDITO"
+              onClick={HandleOpenCloseModal}
+              label={
+                "Se nenhum valor for atribuído ao Limite de Crédito, o cliente poderá realizar compras sem restrição de valor, o que oferece um crédito ilimitado. Caso deseje limitar o crédito do cliente, basta atribuir um valor ao Limite de Crédito. Com o valor definido, o sistema realizará uma verificação para garantir que o cliente possua crédito disponível para efetuar suas compras."
+              }
+            />
+          )}
     </>
   );
 }

@@ -15,7 +15,7 @@ import {Button} from "../../../../_components/( Buttons )/Button";
 import ImageProduct1 from "../../../../../../public/COCA COLA 350ML.png";
 import ImageProduct2 from "../../../../../../public/FANTA LARANJA 350ML.png";
 
-export default function Category() {
+export default function Products() {
   return (
     <>
    
@@ -36,7 +36,7 @@ export default function Category() {
             <input
               className="input-md"
               type="text"
-              placeholder="Pesquise o nome da categoria..."
+              placeholder="Pesquise o nome do produto..."
             />
           </div>
           <div className="inputField">
@@ -66,8 +66,8 @@ export default function Category() {
             <label>Ativo</label>
             <select>
               <option value=""> - -</option>
-              <option value="">Sim</option>
-              <option value="">Não</option>
+              <option value="">Ativo</option>
+              <option value="">Inátivo</option>
             </select>
           </div>
 
@@ -77,7 +77,7 @@ export default function Category() {
             name={"filterCategory"}
             type={"button"}
             className={"btnPrimary"}
-            title={"Pesquisar Categoria"}
+            title={"Pesquisar Produto"}
           />
           <Button
           icon={<IoCloseSharp />}
@@ -93,6 +93,11 @@ export default function Category() {
         <div>
           <label>
             Total de Registros: <span>2</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            Total de Registros da Pesquisa: <span>2</span>
           </label>
         </div>
 

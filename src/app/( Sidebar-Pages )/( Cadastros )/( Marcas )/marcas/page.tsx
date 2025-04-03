@@ -9,7 +9,7 @@ import { IoSearchSharp } from "react-icons/io5"; /* SEARCH */
 
 import {Button} from "@/app/_components/( Buttons )/Button";
 
-export default function Marcas() {
+export default function Brands() {
   return (
     <>
       
@@ -38,8 +38,8 @@ export default function Marcas() {
             <label>Ativo</label>
             <select>
               <option value="">Todas</option>
-              <option value="">Sim</option>
-              <option value="">Não</option>
+              <option value="">Ativo</option>
+              <option value="">Inativo</option>
             </select>
           </div>
 
@@ -57,6 +57,11 @@ export default function Marcas() {
         <div>
           <label>
             Total de Registros: <span>2</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            Total de Registros da Pesquisa: <span>2</span>
           </label>
         </div>
 

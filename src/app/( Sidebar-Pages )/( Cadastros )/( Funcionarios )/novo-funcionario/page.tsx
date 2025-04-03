@@ -5,8 +5,8 @@ import { ImageHandler } from "@/app/_components/ImageHandler";
 import { AlertInputRequired, TitlePages } from "@/app/_components/TitlePages";
 import React, { useEffect, useRef, useState } from "react";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
-import { FaFileContract } from "react-icons/fa";
 import { Modal } from "@/app/_components/Modal";
+import { ButtonInfo } from "@/app/_components/( Buttons )/ButtonInfo";
 
 export default function NewEmployees() {
   const [selectType, setSelectType] = useState(false);
@@ -295,14 +295,11 @@ export default function NewEmployees() {
         <div className="inputField">
           <div className="labelBtnInfo">
             <label>Usuário</label>
-            <button
-              title="Click e saiba mais!"
-              className="iconSaibaMais"
-              id="assignUser"
-              onClick={HandleOpenCloseModal}
-            >
-              <FaFileContract />
-            </button>
+           <ButtonInfo
+           id={"assignUser"}
+           onClick={HandleOpenCloseModal}
+           
+           />
           </div>
           <select name="" required>
             <option value=""> - - </option>
@@ -343,7 +340,7 @@ export default function NewEmployees() {
           tittle={"ATRIBUIR FUNCIONARIO AO USUÁRIO"}
           onClick={HandleOpenCloseModal}
           label={
-            "Ao selecionar a opção de pagar comissão ao funcionário, você pode atribuir um usuário específico do sistema responsável pelos cálculos das comissões de vendas. Caso não selecione nenhum usuário, o funcionário receberá a comissão com base em todas as vendas registradas no sistema. Dessa forma, você terá flexibilidade para atribuir uma comissão individualizada para cada usuário, levando em consideração suas vendas, ou pagar uma comissão com base no total geral de vendas realizadas.  "
+            "Ao selecionar a opção de pagar comissão ao funcionário, você pode atribuir a esse funcionário um usuário específico do sistema responsável pelos cálculos das comissões de vendas. Caso não selecione nenhum usuário, o funcionário receberá a comissão com base em todas as vendas registradas no sistema. Dessa forma, você terá flexibilidade para atribuir uma comissão individualizada para cada usuário, levando em consideração suas vendas, ou pagar uma comissão com base no total geral de vendas realizadas.  "
           }
         />
       )}

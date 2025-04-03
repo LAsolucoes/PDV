@@ -1,6 +1,3 @@
-/* const elementId = (event.target as HTMLElement).id;
-setModalId(elementId);
-setModalOpenClose(!modalOpenClose);  */
 "use client";
 import { TitlePages, AlertInputRequired } from "@/app/_components/TitlePages";
 import { ButtonSalvarVoltar } from "@/app/_components/( Buttons )/ButtonSalvarVoltar";
@@ -8,8 +5,8 @@ import { ButtonViewPassword } from "@/app/_components/( Buttons )/ButtonViewPass
 import { useEffect, useRef, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import { FaFileContract } from "react-icons/fa";
 import { Modal } from "@/app/_components/Modal";
+import { ButtonInfo } from "@/app/_components/( Buttons )/ButtonInfo";
 
 export default function NewUser() {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -114,13 +111,11 @@ export default function NewUser() {
         <div className="inputField">
           <div className="labelBtnInfo">
             <label>Rota Padrão</label>
-            <button
-             title="Click e saiba mais!"
-             className="iconSaibaMais"
-             id="standardRoute"
-             onClick={HandleOpenCloseModal}>
-              <FaFileContract/>
-            </button>
+           <ButtonInfo
+           id={"standardRoute"}
+           onClick={HandleOpenCloseModal}
+           
+           />
           </div>
           <input
             type="text"
@@ -135,13 +130,11 @@ export default function NewUser() {
 
         <div className="labelBtnInfo">
             <label>Lista de Preços</label>
-            <button
-             title="Click e saiba mais!"
-             className="iconSaibaMais"
-             id="listPrice"
-             onClick={HandleOpenCloseModal}>
-              <FaFileContract/>
-            </button>
+            <ButtonInfo
+           id={"listPrice"}
+           onClick={HandleOpenCloseModal}
+           
+           />
           </div>
           
           <select name="listPrice">

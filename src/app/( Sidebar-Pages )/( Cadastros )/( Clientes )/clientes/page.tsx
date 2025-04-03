@@ -12,7 +12,7 @@ import {Button} from "../../../../_components/( Buttons )/Button";
 
 
 
-export default function Clientes() {
+export default function Client() {
   return (
     <>
      
@@ -40,9 +40,9 @@ export default function Clientes() {
           <div className="inputField">
             <label>Ativo</label>
             <select>
-              <option value="">- -</option>
-              <option value="">Sim</option>
-              <option value="">Não</option>
+              <option value="">Todos</option>
+              <option value="">Ativo</option>
+              <option value="">Inátivo</option>
             </select>
           </div>
 
@@ -60,6 +60,11 @@ export default function Clientes() {
         <div>
           <label>
             Total de Registros: <span>2</span>
+          </label>
+        </div>
+        <div>
+          <label>
+            Total de Registros da Pesquisa: <span>2</span>
           </label>
         </div>
 
