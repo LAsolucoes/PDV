@@ -244,7 +244,7 @@ export default function NewClient() {
             <Modal
               tittle="LIMITE DE CRÉDITO"
               onClick={HandleOpenCloseModal}
-              label={
+              descriprion={
                 "Se nenhum valor for atribuído ao Limite de Crédito, o cliente poderá realizar compras sem restrição de valor, o que oferece um crédito ilimitado. Caso deseje limitar o crédito do cliente, basta atribuir um valor ao Limite de Crédito. Com o valor definido, o sistema realizará uma verificação para garantir que o cliente possua crédito disponível para efetuar suas compras."
               }
             />

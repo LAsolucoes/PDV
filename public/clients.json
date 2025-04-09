@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "nome": "João Silva",
+    "email": "joao.silva@email.com",
+    "endereco": "Rua A, 123, Bairro X",
+    "contato": "(11) 99999-0000",
+    "dataCadastro": "2025-04-08",
+    "usuarioCadastro": "admin",
+    "ativo": true
+  },
+  {
+    "id": "2",
+    "nome": "Maria Oliveira",
+    "email": "maria.oliveira@email.com",
+    "endereco": "Rua B, 456, Bairro Y",
+    "contato": "(11) 98888-1111",
+    "dataCadastro": "2025-04-07",
+    "usuarioCadastro": "admin",
+    "ativo": false
+  },
+  {
+    "id": "3",
+    "nome": "Carlos Pereira",
+    "email": "carlos.pereira@email.com",
+    "endereco": "Rua C, 789, Bairro Z",
+    "contato": "(11) 97777-2222",
+    "dataCadastro": "2025-04-06",
+    "usuarioCadastro": "admin",
+    "ativo": true
+  },
+  {
+    "id": "4",
+    "nome": "Ana Souza",
+    "email": "ana.souza@email.com",
+    "endereco": "Rua D, 101, Bairro W",
+    "contato": "(11) 96666-3333",
+    "dataCadastro": "2025-04-05",
+    "usuarioCadastro": "admin",
+    "ativo": true
+  },
+  {
+    "id": "5",
+    "nome": "Ricardo Gomes",
+    "email": "ricardo.gomes@email.com",
+    "endereco": "Rua E, 202, Bairro V",
+    "contato": "(11) 95555-4444",
+    "dataCadastro": "2025-04-04",
+    "usuarioCadastro": "admin",
+    "ativo": true
+  },
+  {
+    "id": "6",
+    "nome": "Juliana Lima",
+    "email": "juliana.lima@email.com",
+    "endereco": "Rua F, 303, Bairro U",
+    "contato": "(11) 94444-5555",
+    "dataCadastro": "2025-04-03",
+    "usuarioCadastro": "admin",
+    "ativo": false
+  },
+  {
+    "id": "7",
+    "nome": "Felipe Santos",
+    "email": "felipe.santos@email.com",
+    "endereco": "Rua G, 404, Bairro T",
+    "contato": "(11) 93333-6666",
+    "dataCadastro": "2025-04-02",
+    "usuarioCadastro": "admin",
+    "ativo": true
+  },
+  {
+    "id": "8",
+    "nome": "Patricia Martins",
+    "email": "patricia.martins@email.com",
+    "endereco": "Rua H, 505, Bairro S",
+    "contato": "(11) 92222-7777",
+    "dataCadastro": "2025-04-01",
+    "usuarioCadastro": "admin",
+    "ativo": true
+  },
+  {
+    "id": "9",
+    "nome": "Roberto Almeida",
+    "email": "roberto.almeida@email.com",
+    "endereco": "Rua I, 606, Bairro R",
+    "contato": "(11) 91111-8888",
+    "dataCadastro": "2025-03-31",
+    "usuarioCadastro": "admin",
+    "ativo": false
+  },
+  {
+    "id": "10",
+    "nome": "Fernanda Costa",
+    "email": "fernanda.costa@email.com",
+    "endereco": "Rua J, 707, Bairro Q",
+    "contato": "(11) 90000-9999",
+    "dataCadastro": "2025-03-30",
+    "usuarioCadastro": "admin",
+    "ativo": true
+  }
+]

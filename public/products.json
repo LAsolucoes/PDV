@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "image": "/assets/coca-cola350ml.png",
+        "name": "Coca-cola 350ml",
+        "estoque": 12,
+        "category": "Bebidas",
+        "saleprice": 5.00,
+        "costprice": 2.50,
+        "updateCad": "12-03-2025  08:54",
+        "user": "Alex",
+        "isActive": true
+    },
+    {
+        "id": 1,
+        "image": "/assets/pepsi-black350ml.png",
+        "name": "Pepsi Black 350ml",
+        "estoque": 15,
+        "category": "Bebidas",
+        "saleprice": 6.00,
+        "costprice": 3.00,
+        "updateCad": "15-03-2025  09:12",
+        "user": "Camila",
+        "isActive": false
+    },
+    {
+        "id": 2,
+        "image": "/assets/guarana-antartica350ml.png",
+        "name": "Guaraná Antarctica 350ml",
+        "estoque": 20,
+        "category": "Bebidas",
+        "saleprice": 4.50,
+        "costprice": 2.00,
+        "updateCad": "18-03-2025  10:30",
+        "user": "Marcos",
+        "isActive": false
+    },
+    {
+        "id": 3,
+        "image": "/assets/fanta-laranja350ml.png",
+        "name": "Fanta Laranja 350ml",
+        "estoque": 18,
+        "category": "Bebidas",
+        "saleprice": 4.00,
+        "costprice": 2.20,
+        "updateCad": "20-03-2025  11:45",
+        "user": "Alex",
+        "isActive": true
+    },
+    {
+        "id": 4,
+        "image": "/assets/coca-cola-zero350ml.png",
+        "name": "Coca-cola Zero 350ml",
+        "estoque": 25,
+        "category": "Bebidas",
+        "saleprice": 5.50,
+        "costprice": 2.80,
+        "updateCad": "22-03-2025  14:00",
+        "user": "Alex",
+        "isActive": true
+    }
+]
